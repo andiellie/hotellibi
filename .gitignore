@@ -17,6 +17,9 @@
 /.next/
 /out/
 
+# licensed fonts (commercial, not for redistribution in this public repo)
+/public/fonts/
+
 # production
 /build
 

@@ -1,15 +1,23 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Hanken_Grotesk } from "next/font/google";
+import localFont from "next/font/local";
+import "@fontsource-variable/inter";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const hankenGrotesk = Hanken_Grotesk({
+  variable: "--font-hanken",
   subsets: ["latin"],
+  weight: ["400", "600", "700"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const neueHaas = localFont({
+  src: [
+    { path: "../public/fonts/neue-haas-grotesk-text-pro-55-roman.ttf", weight: "400", style: "normal" },
+    { path: "../public/fonts/neue-haas-grotesk-text-pro-65-medium.ttf", weight: "500", style: "normal" },
+    { path: "../public/fonts/neue-haas-grotesk-text-pro-75-bold.ttf", weight: "700", style: "normal" },
+  ],
+  variable: "--font-neue-haas",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -21,7 +29,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="es"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${hankenGrotesk.variable} ${neueHaas.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
