@@ -49,7 +49,7 @@ export default function ContactForm() {
                 value={formData.name}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+                className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent transition"
                 placeholder="Tu nombre"
               />
             </div>
@@ -65,7 +65,7 @@ export default function ContactForm() {
                 value={formData.email}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+                className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent transition"
                 placeholder="tu@email.com"
               />
             </div>
@@ -81,7 +81,7 @@ export default function ContactForm() {
               name="phone"
               value={formData.phone}
               onChange={handleChange}
-              className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+              className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent transition"
               placeholder="Tu teléfono"
             />
           </div>
@@ -97,14 +97,14 @@ export default function ContactForm() {
               onChange={handleChange}
               required
               rows={5}
-              className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+              className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent transition"
               placeholder="Cuéntanos tu consulta..."
             />
           </div>
 
           <button
             type="submit"
-            className="w-full px-8 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition font-medium text-lg"
+            className="w-full px-8 py-3 bg-primary-800 text-white rounded-lg hover:bg-primary-900 transition font-medium text-lg"
           >
             Enviar Mensaje
           </button>

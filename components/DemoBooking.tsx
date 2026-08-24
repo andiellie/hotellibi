@@ -24,13 +24,13 @@ export default function DemoBooking() {
   }
 
   return (
-    <section id="demo" className="py-20 sm:py-32 bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-900 dark:to-indigo-900">
+    <section id="demo" className="py-20 sm:py-32 bg-gradient-to-r from-primary-800 to-primary-900 dark:from-primary-900 dark:to-gray-900">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
             ✨ Agenda tu Demo
           </h2>
-          <p className="text-lg text-blue-100">
+          <p className="text-lg text-primary-100">
             Descubre cómo HotelliBI puede transformar tu negocio hotelero
           </p>
         </div>
@@ -48,7 +48,7 @@ export default function DemoBooking() {
                 value={demoData.date}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+                className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent transition"
               />
             </div>
 
@@ -63,7 +63,7 @@ export default function DemoBooking() {
                 value={demoData.time}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+                className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent transition"
               />
             </div>
 
@@ -76,7 +76,7 @@ export default function DemoBooking() {
                 name="type"
                 value={demoData.type}
                 onChange={handleChange}
-                className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition"
+                className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent transition"
               >
                 <option value="general">Demo General</option>
                 <option value="features">Características</option>
@@ -88,7 +88,7 @@ export default function DemoBooking() {
 
           <button
             type="submit"
-            className="w-full px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg hover:from-blue-700 hover:to-indigo-700 transition font-bold text-lg"
+            className="w-full px-8 py-4 bg-gradient-to-r from-primary-800 to-primary-900 text-white rounded-lg hover:from-primary-900 hover:to-gray-900 transition font-bold text-lg"
           >
             🎯 Agendar Demo Ahora
           </button>

@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Brand */}
           <div>
-            <h3 className="text-2xl font-bold text-blue-400 mb-4">HotelliBI</h3>
+            <h3 className="text-2xl font-bold text-primary-400 mb-4">HotelliBI</h3>
             <p className="text-gray-400">
               Solución integral para la gestión hotelera inteligente
             </p>
@@ -17,10 +17,10 @@ export default function Footer() {
           <div>
             <h4 className="font-bold mb-4">Producto</h4>
             <ul className="space-y-2 text-gray-400">
-              <li><a href="#" className="hover:text-white transition">Características</a></li>
-              <li><a href="#" className="hover:text-white transition">Precios</a></li>
-              <li><a href="#" className="hover:text-white transition">API</a></li>
-              <li><a href="#" className="hover:text-white transition">Docs</a></li>
+              <li><a href="#" className="hover:text-primary-400 transition">Características</a></li>
+              <li><a href="#" className="hover:text-primary-400 transition">Precios</a></li>
+              <li><a href="#" className="hover:text-primary-400 transition">API</a></li>
+              <li><a href="#" className="hover:text-primary-400 transition">Docs</a></li>
             </ul>
           </div>
 
@@ -28,10 +28,10 @@ export default function Footer() {
           <div>
             <h4 className="font-bold mb-4">Empresa</h4>
             <ul className="space-y-2 text-gray-400">
-              <li><a href="#" className="hover:text-white transition">Sobre nosotros</a></li>
-              <li><a href="#" className="hover:text-white transition">Blog</a></li>
-              <li><a href="#" className="hover:text-white transition">Casos de éxito</a></li>
-              <li><a href="#" className="hover:text-white transition">Contacto</a></li>
+              <li><a href="#" className="hover:text-primary-400 transition">Sobre nosotros</a></li>
+              <li><a href="#" className="hover:text-primary-400 transition">Blog</a></li>
+              <li><a href="#" className="hover:text-primary-400 transition">Casos de éxito</a></li>
+              <li><a href="#" className="hover:text-primary-400 transition">Contacto</a></li>
             </ul>
           </div>
 
@@ -39,10 +39,10 @@ export default function Footer() {
           <div>
             <h4 className="font-bold mb-4">Legal</h4>
             <ul className="space-y-2 text-gray-400">
-              <li><a href="#" className="hover:text-white transition">Privacidad</a></li>
-              <li><a href="#" className="hover:text-white transition">Términos</a></li>
-              <li><a href="#" className="hover:text-white transition">Cookies</a></li>
-              <li><a href="#" className="hover:text-white transition">Seguridad</a></li>
+              <li><a href="#" className="hover:text-primary-400 transition">Privacidad</a></li>
+              <li><a href="#" className="hover:text-primary-400 transition">Términos</a></li>
+              <li><a href="#" className="hover:text-primary-400 transition">Cookies</a></li>
+              <li><a href="#" className="hover:text-primary-400 transition">Seguridad</a></li>
             </ul>
           </div>
         </div>
@@ -53,10 +53,10 @@ export default function Footer() {
               © 2024 HotelliBI. Todos los derechos reservados.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="text-gray-400 hover:text-white transition">Twitter</a>
-              <a href="#" className="text-gray-400 hover:text-white transition">LinkedIn</a>
-              <a href="#" className="text-gray-400 hover:text-white transition">Facebook</a>
-              <a href="#" className="text-gray-400 hover:text-white transition">Instagram</a>
+              <a href="#" className="text-gray-400 hover:text-primary-400 transition">Twitter</a>
+              <a href="#" className="text-gray-400 hover:text-primary-400 transition">LinkedIn</a>
+              <a href="#" className="text-gray-400 hover:text-primary-400 transition">Facebook</a>
+              <a href="#" className="text-gray-400 hover:text-primary-400 transition">Instagram</a>
             </div>
           </div>
         </div>
