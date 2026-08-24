@@ -2,63 +2,45 @@
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-12">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-          {/* Brand */}
+    <footer className="footer-rule bg-[#020713] px-5 py-14 text-white sm:px-16">
+      <div className="mx-auto max-w-7xl">
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           <div>
-            <h3 className="text-2xl font-bold text-primary-400 mb-4">HotelliBI</h3>
-            <p className="text-gray-400">
-              Solución integral para la gestión hotelera inteligente
+            <h3 className="text-3xl font-black">hotelliBI</h3>
+            <p className="mt-5 max-w-xs leading-6 text-slate-300">
+              Herramienta visual de inteligencia de negocios para hoteles.
             </p>
           </div>
 
-          {/* Product */}
           <div>
-            <h4 className="font-bold mb-4">Producto</h4>
-            <ul className="space-y-2 text-gray-400">
-              <li><a href="#" className="hover:text-primary-400 transition">Características</a></li>
-              <li><a href="#" className="hover:text-primary-400 transition">Precios</a></li>
-              <li><a href="#" className="hover:text-primary-400 transition">API</a></li>
-              <li><a href="#" className="hover:text-primary-400 transition">Docs</a></li>
+            <h4 className="mb-4 text-xs font-bold tracking-widest text-slate-400">SITIO</h4>
+            <ul className="space-y-2 text-slate-300">
+              <li><a href="#features" className="transition hover:text-white">Features</a></li>
+              <li><a href="#integraciones" className="transition hover:text-white">Integrations</a></li>
+              <li><a href="#" className="transition hover:text-white">Pricing</a></li>
             </ul>
           </div>
 
-          {/* Company */}
           <div>
-            <h4 className="font-bold mb-4">Empresa</h4>
-            <ul className="space-y-2 text-gray-400">
-              <li><a href="#" className="hover:text-primary-400 transition">Sobre nosotros</a></li>
-              <li><a href="#" className="hover:text-primary-400 transition">Blog</a></li>
-              <li><a href="#" className="hover:text-primary-400 transition">Casos de éxito</a></li>
-              <li><a href="#" className="hover:text-primary-400 transition">Contacto</a></li>
+            <h4 className="mb-4 text-xs font-bold tracking-widest text-slate-400">CONTACTO Y REDES</h4>
+            <ul className="space-y-2 text-slate-300">
+              <li><a href="mailto:contacto@hotellibi.com" className="transition hover:text-white">contacto@hotellibi.com</a></li>
+              <li><a href="tel:+84567823348" className="transition hover:text-white">+84 567823 34</a></li>
+              <li><a href="#" className="transition hover:text-white">LinkedIn</a></li>
             </ul>
           </div>
 
-          {/* Legal */}
           <div>
-            <h4 className="font-bold mb-4">Legal</h4>
-            <ul className="space-y-2 text-gray-400">
-              <li><a href="#" className="hover:text-primary-400 transition">Privacidad</a></li>
-              <li><a href="#" className="hover:text-primary-400 transition">Términos</a></li>
-              <li><a href="#" className="hover:text-primary-400 transition">Cookies</a></li>
-              <li><a href="#" className="hover:text-primary-400 transition">Seguridad</a></li>
+            <h4 className="mb-4 text-xs font-bold tracking-widest text-slate-400">LEGAL</h4>
+            <ul className="space-y-2 text-slate-300">
+              <li><a href="#" className="transition hover:text-white">Política de Privacidad</a></li>
+              <li><a href="#" className="transition hover:text-white">Términos de Servicio</a></li>
             </ul>
           </div>
         </div>
 
-        <div className="border-t border-gray-800 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400">
-              © 2024 HotelliBI. Todos los derechos reservados.
-            </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="text-gray-400 hover:text-primary-400 transition">Twitter</a>
-              <a href="#" className="text-gray-400 hover:text-primary-400 transition">LinkedIn</a>
-              <a href="#" className="text-gray-400 hover:text-primary-400 transition">Facebook</a>
-              <a href="#" className="text-gray-400 hover:text-primary-400 transition">Instagram</a>
-            </div>
-          </div>
+        <div className="footer-rule mt-16 pt-6">
+          <p className="text-sm text-slate-400">© 2024 HotelliBI. All rights reserved.</p>
         </div>
       </div>
     </footer>

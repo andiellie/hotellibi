@@ -3,60 +3,43 @@
 export default function Features() {
   const features = [
     {
-      icon: '📊',
-      title: 'Analytics en Tiempo Real',
-      description: 'Visualiza métricas clave de tu hotel al instante'
+      icon: '▦',
+      title: 'Control Total',
+      description: 'Monitorea cada métrica vital desde un solo panel. Integración perfecta con tu PMS y sistemas de gestión.'
     },
     {
-      icon: '🔐',
-      title: 'Seguridad Premium',
-      description: 'Protección de datos de nivel empresarial'
+      icon: '◷',
+      title: 'Tiempo Recuperado',
+      description: 'Automatiza la recolección y limpieza de datos. Elimina las hojas de cálculo manuales y enfócate en la estrategia.'
     },
     {
-      icon: '🚀',
-      title: 'Escalabilidad',
-      description: 'Crece sin límites con nuestra infraestructura'
-    },
-    {
-      icon: '⚙️',
-      title: 'Automatización',
-      description: 'Automatiza procesos y ahorra tiempo'
-    },
-    {
-      icon: '📱',
-      title: 'Multi-dispositivo',
-      description: 'Accede desde cualquier dispositivo'
-    },
-    {
-      icon: '🤝',
-      title: 'Soporte 24/7',
-      description: 'Equipo de soporte siempre disponible'
+      icon: '✣',
+      title: 'Visuales Listos',
+      description: 'Reportes de nivel ejecutivo generados al instante. Gráficos interactivos y reportes semanales.'
     }
   ]
 
   return (
-    <section id="features" className="py-20 sm:py-32 bg-gray-50 dark:bg-gray-900">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Características Principales
-          </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400">
-            Todo lo que necesitas para gestionar tu hotel de manera eficiente
+    <section id="features" className="px-5 py-24 sm:py-32">
+      <div className="mx-auto max-w-6xl">
+        <div className="mb-16 text-center">
+          <h2 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">Más que una herramienta visual.</h2>
+          <p className="mt-5 text-lg text-slate-300">
+            Diseñado para ejecutivos que exigen precisión y velocidad en la toma de decisiones.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition transform hover:-translate-y-2 border-l-4 border-primary-800"
+              className="min-h-[300px] rounded-md border border-slate-700/70 bg-[#070d1c]/70 p-8 transition hover:-translate-y-1 hover:border-slate-500"
             >
-              <div className="text-4xl mb-4">{feature.icon}</div>
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+              <div className="mb-7 flex h-12 w-12 items-center justify-center rounded-xl bg-slate-700/70 text-2xl text-slate-200">{feature.icon}</div>
+              <h3 className="mb-4 text-3xl font-normal leading-tight text-white">
                 {feature.title}
               </h3>
-              <p className="text-gray-600 dark:text-gray-400">
+              <p className="leading-6 text-slate-300">
                 {feature.description}
               </p>
             </div>

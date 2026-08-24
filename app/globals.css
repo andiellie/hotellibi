@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #030817;
+  --foreground: #f8fafc;
 }
 
 @theme inline {
@@ -12,15 +12,49 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
 }
+
+html { scroll-behavior: smooth; }
+
+section[id] { scroll-margin-top: 6rem; }
+
+::selection {
+  background: #3746d4;
+  color: #fff;
+}
+
+.site-shell {
+  background: radial-gradient(circle at 76% 58%, rgba(40, 48, 129, .18), transparent 28rem), linear-gradient(145deg, #020713 0%, #061536 48%, #100b2b 100%);
+  overflow: hidden;
+}
+
+.site-nav {
+  background: rgba(5, 7, 18, .86);
+  border: 1px solid rgba(226, 232, 240, .55);
+  border-radius: 30px;
+  box-shadow: 0 16px 45px rgba(0, 0, 0, .2);
+}
+
+.glow-button {
+  background: #05060c;
+  border: 1px solid #3b55ff;
+  box-shadow: 0 0 26px rgba(59, 85, 255, .65), 12px 0 25px rgba(255, 126, 21, .38);
+}
+
+.dashboard-frame {
+  background: #f8f8fa;
+  border: 1px solid #cbd0d8;
+  box-shadow: 0 22px 70px rgba(0, 0, 0, .32);
+}
+
+.chart-line {
+  background: #3746d4;
+  clip-path: polygon(0 78%, 12% 70%, 24% 48%, 35% 56%, 47% 25%, 59% 34%, 70% 12%, 82% 22%, 92% 2%, 100% 13%, 100% 25%, 92% 14%, 82% 35%, 70% 24%, 59% 46%, 47% 37%, 35% 68%, 24% 60%, 12% 82%, 0 90%);
+}
+
+.footer-rule { border-top: 1px solid rgba(148, 163, 184, .18); }

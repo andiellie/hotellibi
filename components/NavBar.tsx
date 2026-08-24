@@ -2,34 +2,18 @@
 
 export default function NavBar() {
   return (
-    <nav className="sticky top-0 z-50 bg-white dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <div className="flex-shrink-0">
-            <a href="/" className="text-2xl font-bold text-primary-800 dark:text-primary-400">
-              HotelliBI
-            </a>
+    <nav className="sticky top-4 z-50 mx-4 sm:mx-10 lg:mx-12 site-nav">
+      <div className="mx-auto max-w-[1200px] px-5 sm:px-8">
+        <div className="flex min-h-[78px] items-center justify-between gap-5">
+          <div className="hidden items-center gap-8 text-sm font-semibold text-slate-300 md:flex">
+            <a href="#features" className="border-b-2 border-white pb-2 text-white">Features</a>
+            <a href="#integraciones" className="hover:text-white transition">Integraciones</a>
+            <a href="#demo" className="hover:text-white transition">Agenda una DEMO</a>
           </div>
-
-          {/* Navigation Links */}
-          <div className="hidden md:flex space-x-8">
-            <a href="#features" className="text-gray-600 dark:text-gray-400 hover:text-primary-800 dark:hover:text-primary-400 transition">
-              Features
-            </a>
-            <a href="#contact" className="text-gray-600 dark:text-gray-400 hover:text-primary-800 dark:hover:text-primary-400 transition">
-              Contact
-            </a>
-            <a href="#demo" className="text-gray-600 dark:text-gray-400 hover:text-primary-800 dark:hover:text-primary-400 transition">
-              Demo
-            </a>
-          </div>
-
-          {/* CTA Button */}
-          <div className="flex items-center space-x-4">
-            <button className="px-6 py-2 bg-primary-800 text-white rounded-lg hover:bg-primary-900 transition font-medium">
-              Get Started
-            </button>
+          <a href="/" className="text-4xl font-black tracking-tight text-white">hotelliBI</a>
+          <div className="flex items-center gap-5 sm:gap-8">
+            <span className="text-sm text-white">ES</span>
+            <a href="#demo" className="rounded-sm bg-[#3746d4] px-5 py-3 text-sm font-bold text-white transition hover:bg-[#4958eb]">Acceso a clientes</a>
           </div>
         </div>
       </div>
