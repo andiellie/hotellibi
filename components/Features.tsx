@@ -1,31 +1,18 @@
 'use client'
 
+import { useLanguage } from '@/lib/i18n/LanguageProvider'
+
 export default function Features() {
-  const features = [
-    {
-      icon: '▦',
-      title: 'Control Total',
-      description: 'Monitorea cada métrica vital desde un solo panel. Integración perfecta con tu PMS y sistemas de gestión.'
-    },
-    {
-      icon: '◷',
-      title: 'Tiempo Recuperado',
-      description: 'Automatiza la recolección y limpieza de datos. Elimina las hojas de cálculo manuales y enfócate en la estrategia.'
-    },
-    {
-      icon: '✣',
-      title: 'Visuales Listos',
-      description: 'Reportes de nivel ejecutivo generados al instante. Gráficos interactivos y reportes semanales.'
-    }
-  ]
+  const { t } = useLanguage()
+  const features = t.features.items
 
   return (
     <section id="features" className="px-5 py-24 sm:py-32">
       <div className="mx-auto max-w-6xl">
         <div className="mb-16 text-center">
-          <h2 className="font-display text-4xl font-medium tracking-tight text-white sm:text-5xl lg:text-[48px] lg:leading-[56px] lg:tracking-[-0.96px]">Más que una herramienta visual.</h2>
+          <h2 className="font-display text-4xl font-medium tracking-tight text-white sm:text-5xl lg:text-[48px] lg:leading-[56px] lg:tracking-[-0.96px]">{t.features.heading}</h2>
           <p className="mt-5 font-sans text-lg text-on-dark-secondary">
-            Diseñado para ejecutivos que exigen precisión y velocidad en la toma de decisiones.
+            {t.features.subheading}
           </p>
         </div>
 

@@ -1,30 +1,28 @@
 'use client'
 
 import Image from 'next/image'
+import { useLanguage } from '@/lib/i18n/LanguageProvider'
 
 export default function Footer() {
+  const { t } = useLanguage()
+  const f = t.footer
   return (
-    <footer className="footer-rule bg-navy-alt px-5 py-14 font-sans text-white sm:px-16">
-      <div className="mx-auto max-w-7xl">
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
-          <div>
-            <Image src="/hotellibi-logo-blanco.svg" alt="hotelliBI" width={130} height={24} />
-            <p className="mt-5 max-w-xs leading-6 text-on-dark-secondary">
-              Herramienta visual de inteligencia de negocios para hoteles.
-            </p>
-          </div>
+    <footer className="footer-rule flex min-h-screen flex-col justify-center bg-navy-alt px-5 py-14 font-sans text-white sm:px-16">
+      <div className="mx-auto w-full max-w-7xl">
+        <p className="mb-10 text-sm text-on-dark-muted">{f.rights}</p>
 
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           <div>
-            <h4 className="mb-4 text-xs font-bold tracking-widest text-on-dark-muted">SITIO</h4>
+            <h4 className="mb-4 text-xs font-bold tracking-widest text-on-dark-muted">{f.site}</h4>
             <ul className="space-y-2 text-on-dark-secondary">
-              <li><a href="#features" className="transition hover:text-white">Features</a></li>
-              <li><a href="#integraciones" className="transition hover:text-white">Integrations</a></li>
-              <li><a href="#" className="transition hover:text-white">Pricing</a></li>
+              <li><a href="#features" className="transition hover:text-white">{t.nav.features}</a></li>
+              <li><a href="#integraciones" className="transition hover:text-white">{t.nav.integrations}</a></li>
+              <li><a href="#" className="transition hover:text-white">{f.pricing}</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="mb-4 text-xs font-bold tracking-widest text-on-dark-muted">CONTACTO Y REDES</h4>
+            <h4 className="mb-4 text-xs font-bold tracking-widest text-on-dark-muted">{f.contact}</h4>
             <ul className="space-y-2 text-on-dark-secondary">
               <li><a href="mailto:contacto@hotellibi.com" className="transition hover:text-white">contacto@hotellibi.com</a></li>
               <li><a href="tel:+84567823348" className="transition hover:text-white">+84 567823 34</a></li>
@@ -33,16 +31,25 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="mb-4 text-xs font-bold tracking-widest text-on-dark-muted">LEGAL</h4>
+            <h4 className="mb-4 text-xs font-bold tracking-widest text-on-dark-muted">{f.legal}</h4>
             <ul className="space-y-2 text-on-dark-secondary">
-              <li><a href="#" className="transition hover:text-white">Política de Privacidad</a></li>
-              <li><a href="#" className="transition hover:text-white">Términos de Servicio</a></li>
+              <li><a href="#" className="transition hover:text-white">{f.privacy}</a></li>
+              <li><a href="#" className="transition hover:text-white">{f.terms}</a></li>
             </ul>
           </div>
         </div>
 
-        <div className="footer-rule mt-16 pt-6">
-          <p className="text-sm text-on-dark-muted">© 2024 HotelliBI. All rights reserved.</p>
+        <div className="mt-16">
+          <Image
+            src="/hotellibi-logo-blanco.svg"
+            alt="hotelliBI"
+            width={640}
+            height={118}
+            className="h-auto w-full max-w-2xl opacity-90"
+          />
+          <p className="mt-10 max-w-xl leading-6 text-on-dark-secondary">
+            {f.tagline}
+          </p>
         </div>
       </div>
     </footer>

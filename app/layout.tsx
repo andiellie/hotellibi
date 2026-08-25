@@ -1,14 +1,8 @@
 import type { Metadata } from "next";
-import { Hanken_Grotesk } from "next/font/google";
 import localFont from "next/font/local";
 import "@fontsource-variable/inter";
 import "./globals.css";
-
-const hankenGrotesk = Hanken_Grotesk({
-  variable: "--font-hanken",
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
-});
+import { LanguageProvider } from "@/lib/i18n/LanguageProvider";
 
 const neueHaas = localFont({
   src: [
@@ -29,9 +23,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="es"
-      className={`${hankenGrotesk.variable} ${neueHaas.variable} h-full antialiased`}
+      className={`${neueHaas.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <LanguageProvider>{children}</LanguageProvider>
+      </body>
     </html>
   );
 }

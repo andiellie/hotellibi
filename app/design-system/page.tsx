@@ -1,222 +1,157 @@
 'use client'
 
+import Image from 'next/image'
+
+const typography = [
+  { name: 'Hero H1', spec: 'Neue Haas Grotesk Text Pro 75 Bold · 72px / 80px · ls -3.6px', example: 'Control Total de tu Hotel.', className: 'font-display font-bold text-white', style: { fontSize: '72px', lineHeight: '80px', letterSpacing: '-3.6px' } },
+  { name: 'H2 Sección', spec: 'Neue Haas Grotesk Text Pro 65 Medium · 48px / 56px · ls -0.96px', example: 'Con HotelliBI tienes el control en tus manos.', className: 'font-display font-medium text-white', style: { fontSize: '48px', lineHeight: '56px', letterSpacing: '-0.96px' } },
+  { name: 'H3 Card', spec: 'Neue Haas Grotesk Text Pro 55 Roman · 32px / 40px', example: 'Control Total', className: 'font-display font-normal text-white', style: { fontSize: '32px', lineHeight: '40px' } },
+  { name: 'Métrica grande', spec: 'Neue Haas Grotesk Text Pro 65 Medium · 32px / 40px · ls -0.32px', example: '78.4%', className: 'font-display font-medium text-white', style: { fontSize: '32px', lineHeight: '40px', letterSpacing: '-0.32px' } },
+  { name: 'Card título (dashboard)', spec: 'Neue Haas Grotesk Text Pro 55 Roman · 24px / 32px', example: 'Rendimiento Global', className: 'font-display font-normal text-white', style: { fontSize: '24px', lineHeight: '32px' } },
+  { name: 'Body (dashboard/cards)', spec: 'Inter Regular · 16px / 24px', example: 'Monitorea tu hotel de cerca', className: 'font-sans font-normal text-on-dark-secondary', style: { fontSize: '16px', lineHeight: '24px' } },
+  { name: 'Subtítulo hero', spec: 'Inter Regular · 18px / 28px', example: 'HotelliBI unifica tus datos', className: 'font-sans font-normal text-on-dark-secondary', style: { fontSize: '18px', lineHeight: '28px' } },
+  { name: 'Body / párrafo', spec: 'Inter Regular · 16px / 24px', example: 'Diseñado para ejecutivos que exigen precisión', className: 'font-sans font-normal text-on-dark-secondary', style: { fontSize: '16px', lineHeight: '24px' } },
+  { name: 'Botón / CTA', spec: 'Inter Semi Bold · 16px', example: 'Agenda tu Demo', className: 'font-sans font-semibold text-white', style: { fontSize: '16px' } },
+  { name: 'Nav link', spec: 'Inter Semi Bold · 14px / 20px · ls 0.28px', example: 'Home', className: 'font-sans font-semibold text-white', style: { fontSize: '14px', lineHeight: '20px', letterSpacing: '0.28px' } },
+  { name: 'Badge chico', spec: 'Inter Semi Bold · 14px / 20px', example: 'Acceso a clientes', className: 'font-sans font-semibold text-white', style: { fontSize: '14px', lineHeight: '20px' } },
+  { name: 'Footer heading', spec: 'Inter Medium · 14px / 20px · ls 0.7px', example: 'CONTACTO Y REDES', className: 'font-sans font-medium text-on-dark-muted', style: { fontSize: '14px', lineHeight: '20px', letterSpacing: '0.7px' } },
+  { name: 'Eyebrow / label dashboard', spec: 'Inter Medium · 12px / 16px · ls 0.48px', example: 'YTD 2024', className: 'font-sans font-medium text-accent-red', style: { fontSize: '12px', lineHeight: '16px', letterSpacing: '0.48px' } },
+  { name: 'Footer link', spec: 'Inter Medium · 11px / 16px · ls 0.88px', example: 'Integraciones', className: 'font-sans font-medium text-on-dark-secondary', style: { fontSize: '11px', lineHeight: '16px', letterSpacing: '0.88px' } },
+]
+
+const colors = [
+  { name: 'bg-navy-deepest', hex: '#000510' },
+  { name: 'bg-navy-mid', hex: '#141A4E' },
+  { name: 'bg-navy-alt', hex: '#080B17' },
+  { name: 'bg-near-black', hex: '#0A0A0D' },
+  { name: 'brand-blue', hex: '#3141D0' },
+  { name: 'accent-red', hex: '#B30205' },
+  { name: 'text-on-dark-secondary', hex: '#C5C6CC' },
+  { name: 'text-on-dark-muted', hex: '#8F9096' },
+  { name: 'text-on-light-secondary', hex: '#757575' },
+  { name: 'surface-offwhite', hex: '#F8F5F5' },
+  { name: 'border-on-dark', hex: '#AFAFAF' },
+  { name: 'icon-blue-gray', hex: '#BEC7D8' },
+]
+
+const radii = [
+  { name: 'Botones ícono', value: '2px' },
+  { name: 'Value Pillar Cards', value: '8px' },
+  { name: 'Overlays / badges', value: '12px' },
+  { name: 'Nav pill', value: '28px' },
+  { name: 'Botón CTA (pill)', value: '999px' },
+]
+
 export default function DesignSystemPage() {
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-gray-900 py-12 px-4">
-      <div className="max-w-6xl mx-auto">
-        <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-12">
-          HotelliBI Design System
-        </h1>
+    <div className="min-h-screen bg-navy-deepest px-4 py-12 font-sans text-white">
+      <div className="mx-auto max-w-6xl">
+        <h1 className="mb-2 font-display text-3xl font-bold">Design System — HotelliBI Website</h1>
+        <p className="mb-12 max-w-2xl text-sm text-on-dark-secondary">
+          Tokens en producción. Tipografías reales: Neue Haas Grotesk Text Pro (display), Inter Variable (UI).
+          Fuente de verdad: <code className="text-icon-blue-gray">app/globals.css</code>.
+        </p>
 
-        {/* Paleta de Colores */}
+        {/* Marca */}
         <section className="mb-16">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">
-            Paleta de Colores
-          </h2>
-
-          {/* Primarios */}
-          <div className="mb-12">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-              Colores Primarios (Azul)
-            </h3>
-            <div className="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-10 gap-4">
-              {[50, 100, 200, 300, 400, 500, 600, 700, 800, 900].map((shade) => {
-                const colors: { [key: number]: string } = {
-                  50: '#EFF6FF', 100: '#DBEAFE', 200: '#BFDBFE', 300: '#93C5FD',
-                  400: '#60A5FA', 500: '#3B82F6', 600: '#2563EB', 700: '#1D4ED8',
-                  800: '#1E40AF', 900: '#1E3A8A'
-                }
-                return (
-                  <div key={shade} className="text-center">
-                    <div
-                      className="w-full h-24 rounded-lg shadow-md mb-2 border border-gray-200"
-                      style={{ backgroundColor: colors[shade] }}
-                    />
-                    <p className="text-xs font-mono text-gray-600 dark:text-gray-400">
-                      {shade}
-                    </p>
-                    <p className="text-xs font-mono text-gray-500 dark:text-gray-500">
-                      {colors[shade]}
-                    </p>
-                  </div>
-                )
-              })}
-            </div>
-          </div>
-
-          {/* Secundarios */}
-          <div className="mb-12">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-              Colores Secundarios (Naranja)
-            </h3>
-            <div className="grid grid-cols-2 md:grid-cols-5 lg:grid-cols-10 gap-4">
-              {[
-                { shade: 50, color: '#FFF7ED' },
-                { shade: 100, color: '#FFEDD5' },
-                { shade: 200, color: '#FED7AA' },
-                { shade: 300, color: '#FDBA74' },
-                { shade: 400, color: '#FB923C' },
-                { shade: 500, color: '#F97316' },
-                { shade: 600, color: '#EA580C' },
-                { shade: 700, color: '#C2410C' },
-                { shade: 800, color: '#FF6B5B' },
-                { shade: 900, color: '#E84C3D' },
-              ].map(({ shade, color }) => (
-                <div key={shade} className="text-center">
-                  <div
-                    className="w-full h-24 rounded-lg shadow-md mb-2 border border-gray-200"
-                    style={{ backgroundColor: color }}
-                  />
-                  <p className="text-xs font-mono text-gray-600 dark:text-gray-400">
-                    {shade}
-                  </p>
-                  <p className="text-xs font-mono text-gray-500 dark:text-gray-500">
-                    {color}
-                  </p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Funcionales */}
-          <div>
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-              Colores Funcionales
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-              {[
-                { name: 'Success', color: '#10B981' },
-                { name: 'Error', color: '#EF4444' },
-                { name: 'Warning', color: '#F59E0B' },
-                { name: 'Info', color: '#0EA5E9' },
-              ].map(({ name, color }) => (
-                <div key={name} className="bg-white dark:bg-gray-800 p-4 rounded-lg">
-                  <div
-                    className="w-full h-24 rounded-lg mb-3 border border-gray-200"
-                    style={{ backgroundColor: color }}
-                  />
-                  <p className="font-semibold text-gray-900 dark:text-white">{name}</p>
-                  <p className="text-sm font-mono text-gray-600 dark:text-gray-400">{color}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Botones */}
-        <section className="mb-16 bg-white dark:bg-gray-800 p-8 rounded-xl">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">
-            Componentes - Botones
-          </h2>
-          <div className="space-y-6">
+          <h2 className="mb-6 font-display text-xl font-medium">Marca</h2>
+          <div className="flex flex-wrap gap-8">
             <div>
-              <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">Primario</p>
-              <button className="px-8 py-3 bg-primary-800 text-white rounded-lg hover:bg-primary-900 transition font-medium">
-                Botón Principal
-              </button>
+              <div className="flex h-24 w-56 items-center justify-center rounded-pillar-card border border-white/10 bg-navy-alt px-6">
+                <Image src="/hotellibi-logo-blanco.svg" alt="hotelliBI" width={143} height={26} />
+              </div>
+              <p className="mt-2 text-xs text-on-dark-secondary">Logo — blanco (público/hotellibi-logo-blanco.svg)</p>
             </div>
             <div>
-              <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">Secundario</p>
-              <button className="px-8 py-3 border-2 border-primary-800 text-primary-800 dark:text-primary-400 dark:border-primary-400 rounded-lg hover:bg-primary-50 dark:hover:bg-gray-700 transition font-medium">
-                Botón Secundario
-              </button>
-            </div>
-            <div>
-              <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">Texto</p>
-              <button className="text-primary-800 dark:text-primary-400 hover:text-primary-900 font-medium transition">
-                Botón de Texto
-              </button>
+              <div className="flex h-24 w-24 items-center justify-center rounded-pillar-card border border-white/10 bg-navy-alt">
+                <Image src="/icon.png" alt="Favicon hotelliBI" width={48} height={48} />
+              </div>
+              <p className="mt-2 text-xs text-on-dark-secondary">Favicon — 64×64 (app/icon.png)</p>
             </div>
           </div>
         </section>
 
         {/* Tipografía */}
-        <section className="mb-16 bg-white dark:bg-gray-800 p-8 rounded-xl">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">
-            Tipografía
-          </h2>
-          <div className="space-y-6">
-            <div>
-              <p className="text-xs text-gray-600 dark:text-gray-400 mb-2">H1</p>
-              <h1 className="text-4xl font-bold text-gray-900 dark:text-white">
-                Título principal - 36px
-              </h1>
-            </div>
-            <div>
-              <p className="text-xs text-gray-600 dark:text-gray-400 mb-2">H2</p>
-              <h2 className="text-3xl font-bold text-gray-900 dark:text-white">
-                Título secundario - 30px
-              </h2>
-            </div>
-            <div>
-              <p className="text-xs text-gray-600 dark:text-gray-400 mb-2">H3</p>
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
-                Título terciario - 24px
-              </h3>
-            </div>
-            <div>
-              <p className="text-xs text-gray-600 dark:text-gray-400 mb-2">Párrafo</p>
-              <p className="text-base text-gray-600 dark:text-gray-300">
-                Este es un párrafo de texto normal con tamaño 16px
-              </p>
-            </div>
-            <div>
-              <p className="text-xs text-gray-600 dark:text-gray-400 mb-2">Pequeño</p>
-              <p className="text-sm text-gray-500 dark:text-gray-400">
-                Texto pequeño de 14px
-              </p>
-            </div>
-          </div>
-        </section>
-
-        {/* Tarjetas */}
         <section className="mb-16">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">
-            Tarjetas
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[1, 2, 3].map((i) => (
-              <div
-                key={i}
-                className="bg-white dark:bg-gray-800 p-8 rounded-xl shadow-lg hover:shadow-xl transition transform hover:-translate-y-2"
-              >
-                <div className="text-4xl mb-4">✨</div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                  Tarjeta {i}
-                </h3>
-                <p className="text-gray-600 dark:text-gray-400">
-                  Descripción de la tarjeta con contenido importante
-                </p>
+          <h2 className="mb-6 font-display text-xl font-medium">Tipografía</h2>
+          <div className="divide-y divide-white/10 rounded-pillar-card border border-white/10">
+            {typography.map((row) => (
+              <div key={row.name} className="grid grid-cols-1 gap-2 p-5 md:grid-cols-[220px_1fr]">
+                <div>
+                  <p className="text-sm font-semibold text-white">{row.name}</p>
+                  <p className="text-xs text-on-dark-muted">{row.spec}</p>
+                </div>
+                <p className={row.className} style={row.style}>{row.example}</p>
               </div>
             ))}
           </div>
         </section>
 
-        {/* Formularios */}
-        <section className="bg-white dark:bg-gray-800 p-8 rounded-xl">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">
-            Formularios
-          </h2>
-          <div className="space-y-6">
+        {/* Color */}
+        <section className="mb-16">
+          <h2 className="mb-6 font-display text-xl font-medium">Color</h2>
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-4 lg:grid-cols-6">
+            {colors.map((c) => (
+              <div key={c.name}>
+                <div className="h-20 rounded-pillar-card border border-white/10" style={{ backgroundColor: c.hex }} />
+                <p className="mt-2 text-xs font-semibold text-white">{c.name}</p>
+                <p className="font-mono text-xs text-on-dark-muted">{c.hex}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Corner Radius */}
+        <section className="mb-16">
+          <h2 className="mb-6 font-display text-xl font-medium">Corner Radius</h2>
+          <div className="flex flex-wrap gap-8">
+            {radii.map((r) => (
+              <div key={r.name} className="text-center">
+                <div
+                  className="mb-2 h-16 w-16 border border-white/15 bg-white/5"
+                  style={{ borderRadius: r.value === '999px' ? '999px' : r.value }}
+                />
+                <p className="text-xs font-semibold text-white">{r.name}</p>
+                <p className="text-xs text-on-dark-muted">{r.value}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Sombras y efectos */}
+        <section>
+          <h2 className="mb-6 font-display text-xl font-medium">Sombras y efectos</h2>
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-3">
             <div>
-              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                Input de texto
-              </label>
-              <input
-                type="text"
-                placeholder="Placeholder de ejemplo"
-                className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent transition"
-              />
+              <div className="dashboard-frame h-24 rounded-pillar-card" />
+              <p className="mt-2 text-xs text-on-dark-secondary">Dashboard frame — surface-offwhite, border-on-dark, drop shadow 0/25/50 · 25% negro</p>
             </div>
             <div>
-              <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                Textarea
-              </label>
-              <textarea
-                placeholder="Placeholder de ejemplo"
-                rows={4}
-                className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-900 text-gray-900 dark:text-white focus:ring-2 focus:ring-primary-500 focus:border-transparent transition"
-              />
+              <div className="site-nav flex h-24 items-center justify-center">
+                <span className="text-xs text-on-dark-secondary">Glassmorphism</span>
+              </div>
+              <p className="mt-2 text-xs text-on-dark-secondary">Nav — backdrop-blur(20px) saturate(140%)</p>
+            </div>
+            <div className="flex flex-col items-center justify-center">
+              <a href="#" className="group relative inline-flex h-11 items-center justify-center rounded-full px-6 text-sm font-bold text-white">
+                <span className="absolute inset-0 overflow-hidden rounded-full">
+                  <span
+                    className="absolute inset-[-150%] animate-[spin_4s_linear_infinite] motion-reduce:animate-none"
+                    style={{ background: 'conic-gradient(from 0deg, transparent 0deg, var(--color-brand-blue) 55deg, #ffffff 90deg, var(--color-brand-blue) 125deg, transparent 190deg, #ff7e15 300deg, transparent 345deg)' }}
+                  />
+                </span>
+                <span className="absolute inset-[2px] rounded-full bg-near-black" />
+                <span className="relative z-10">Agenda tu Demo</span>
+              </a>
+              <p className="mt-2 text-xs text-on-dark-secondary">Glow CTA — rotating brand-blue + orange ring</p>
+            </div>
+            <div>
+              <div className="footer-rule h-24 pt-4">
+                <span className="text-xs text-on-dark-secondary">Contenido abajo de la línea</span>
+              </div>
+              <p className="mt-2 text-xs text-on-dark-secondary">
+                .footer-rule — border-top 1px rgba(148,163,184,.18). Retirada temporalmente del footer, guardada acá para reusar.
+              </p>
             </div>
           </div>
         </section>
