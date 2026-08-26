@@ -172,8 +172,8 @@ export default function DesignSystemPage() {
         <section className="mt-16">
           <h2 className="mb-2 font-display text-xl font-medium">Navbar v2 (concepto — solo preview)</h2>
           <p className="mb-6 max-w-2xl text-sm text-on-dark-secondary">
-            Alternativa con glass gris #333333, wordmark "hotelliBI" como texto real centrado (fuente Days One,
-            no imagen), links a la izquierda, toggle de idioma + "Log In Socios" a la derecha con íconos
+            Alternativa con glass gris #333333, wordmark &quot;hotelliBI&quot; como texto real centrado (fuente Days One,
+            no imagen), links a la izquierda, toggle de idioma + &quot;Log In Socios&quot; a la derecha con íconos
             lucide-react. No implementado en el sitio real — solo este preview.
           </p>
           <NavbarV2Preview />
@@ -183,9 +183,9 @@ export default function DesignSystemPage() {
         <section className="mt-16">
           <h2 className="mb-2 font-display text-xl font-medium">Footer 2 (concepto — solo preview)</h2>
           <p className="mb-6 max-w-2xl text-sm text-on-dark-secondary">
-            Inspirado en screen.movie: wordmark "hotelliBI" gigante como watermark de fondo (opacidad ~6%),
+            Inspirado en screen.movie: wordmark &quot;hotelliBI&quot; gigante como watermark de fondo (opacidad ~6%),
             gráfico de barras estilizado con contornos neón (gradiente brand-blue → naranja, mismos colores
-            que la CTA "Agenda tu Demo") que crece al entrar en viewport, y 2–3 links discretos arriba a la
+            que la CTA &quot;Agenda tu Demo&quot;) que crece al entrar en viewport, y 2–3 links discretos arriba a la
             derecha. Sin columnas tradicionales. No implementado en el sitio real — solo este preview.
           </p>
           <Footer2Preview />

@@ -36,7 +36,13 @@ export default function BigStatement() {
         className="mx-auto max-w-[1200px] font-display text-5xl font-medium leading-tight tracking-tight text-on-dark-primary sm:text-7xl"
       >
         <span className={lineClass}>{t.bigStatement.line1}</span>
-        <span className={lineClass} style={{ transitionDelay: '150ms' }}>
+        <span
+          className={`${lineClass} ${visible ? 'text-shimmer' : ''}`}
+          style={{
+            transitionDelay: '150ms',
+            animation: visible ? 'text-shimmer-sweep 1.4s ease-out 900ms both' : undefined,
+          }}
+        >
           {t.bigStatement.line2}
         </span>
       </h1>

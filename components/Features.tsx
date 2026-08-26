@@ -124,7 +124,7 @@ export default function Features() {
             <div
               key={index}
               onMouseEnter={() => replay(index)}
-              className="glass-card min-h-[300px] rounded-pillar-card p-8 transition hover:-translate-y-1"
+              className="min-h-[300px] rounded-pillar-card border border-slate-700/70 p-8 transition hover:-translate-y-1 hover:border-slate-500"
             >
               <div
                 className="mb-7 flex h-12 w-12 items-center justify-center rounded-badge bg-slate-700/70 text-icon-blue-gray"

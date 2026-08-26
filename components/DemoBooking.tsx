@@ -52,9 +52,23 @@ export default function DemoBooking() {
                   transform: visible ? 'translateX(0)' : 'translateX(-12px)',
                 }}
               >
-                <span className="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full border-2 border-[#E6714B] text-[#E6714B]">
+                <span
+                  className="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full border-2 border-[#E6714B] text-[#E6714B] transition-transform duration-300 ease-out"
+                  style={{
+                    transitionDelay: `${150 + i * 100 + 250}ms`,
+                    transform: visible ? 'scale(1)' : 'scale(0.5)',
+                  }}
+                >
                   <svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="square" strokeLinejoin="miter" aria-hidden="true">
-                    <path d="M4 12l6 6L20 6" />
+                    <path
+                      pathLength={100}
+                      strokeDasharray={100}
+                      d="M4 12l6 6L20 6"
+                      style={{
+                        strokeDashoffset: visible ? 0 : 100,
+                        transition: `stroke-dashoffset 0.4s ease-out ${150 + i * 100 + 350}ms`,
+                      }}
+                    />
                   </svg>
                 </span>
                 <span>{item}</span>

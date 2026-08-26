@@ -213,6 +213,29 @@ section[id] { scroll-margin-top: 6rem; }
   }
 }
 
+@keyframes text-shimmer-sweep {
+  from { background-position: 200% 0; }
+  to { background-position: -200% 0; }
+}
+
+.text-shimmer {
+  background-image: linear-gradient(
+    100deg,
+    var(--color-on-dark-primary) 40%,
+    #e6714b 50%,
+    var(--color-brand-blue) 55%,
+    var(--color-on-dark-primary) 65%
+  );
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .text-shimmer { animation: none !important; }
+}
+
 @keyframes logo-scroll {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
