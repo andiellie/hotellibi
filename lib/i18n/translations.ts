@@ -38,6 +38,12 @@ export type Translations = {
     role: string
     initials: string
   }
+  testimonial2: {
+    quote: string
+    name: string
+    role: string
+    initials: string
+  }
   finalCta: {
     title: string
     subtitle: string
@@ -128,6 +134,13 @@ export const translations: Record<Language, Translations> = {
       name: 'Martín Ibáñez',
       role: 'Gerente General, Hotel Plaza Central',
       initials: 'MI',
+    },
+    testimonial2: {
+      quote:
+        'Lo que más valoro de hotelliBI es lo simple que es interpretarlo: no necesito ser analista de datos para entender si estamos mejor o peor que el mes pasado. El equipo de recepción y hasta el dueño del hotel entran al mismo dashboard y hablan el mismo idioma. Pasamos de discutir números en reuniones interminables a resolverlo en cinco minutos.',
+      name: 'Valentina Suárez',
+      role: 'Directora de Operaciones, Ñikén Hotel & Spa',
+      initials: 'VS',
     },
     finalCta: {
       title: 'Lleva la gestión de tu hotel a otro nivel.',
@@ -222,6 +235,13 @@ export const translations: Record<Language, Translations> = {
       name: 'Martín Ibáñez',
       role: 'General Manager, Hotel Plaza Central',
       initials: 'MI',
+    },
+    testimonial2: {
+      quote:
+        "What I value most about hotelliBI is how easy it is to read: I don't need to be a data analyst to understand whether we're doing better or worse than last month. The front desk team and even the hotel owner log into the same dashboard and speak the same language. We went from arguing over numbers in endless meetings to settling it in five minutes.",
+      name: 'Valentina Suárez',
+      role: 'Director of Operations, Ñikén Hotel & Spa',
+      initials: 'VS',
     },
     finalCta: {
       title: "Take your hotel's management to the next level.",

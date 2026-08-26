@@ -14,6 +14,7 @@ export default function Home() {
       <NavBar />
       <Hero />
       <Features />
+      <Testimonial which="testimonial2" id="testimonios-2" />
       <DashboardPreview />
       <ClientsSection />
       <Testimonial />

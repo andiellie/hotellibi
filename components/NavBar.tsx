@@ -1,6 +1,7 @@
 'use client'
 
 import Image from 'next/image'
+import Link from 'next/link'
 import { useLanguage } from '@/lib/i18n/LanguageProvider'
 
 export default function NavBar() {
@@ -17,9 +18,9 @@ export default function NavBar() {
             <a href="#integraciones" className="hover:text-white transition">{t.nav.integrations}</a>
             <a href="#demo" className="hover:text-white transition">{t.nav.demo}</a>
           </div>
-          <a href="/" className="shrink-0">
+          <Link href="/" className="shrink-0">
             <Image src="/hotellibi-logo-blanco.svg" alt="hotelliBI" width={143} height={26} priority />
-          </a>
+          </Link>
           <div className="flex items-center gap-3 sm:gap-4">
             <button
               type="button"

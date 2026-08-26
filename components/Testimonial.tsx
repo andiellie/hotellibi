@@ -2,12 +2,17 @@
 
 import { useLanguage } from '@/lib/i18n/LanguageProvider'
 
-export default function Testimonial() {
+type TestimonialProps = {
+  which?: 'testimonial' | 'testimonial2'
+  id?: string
+}
+
+export default function Testimonial({ which = 'testimonial', id = 'testimonios' }: TestimonialProps) {
   const { t } = useLanguage()
-  const testimonial = t.testimonial
+  const testimonial = t[which]
 
   return (
-    <section id="testimonios" className="px-5 py-24 sm:py-32">
+    <section id={id} className="px-5 py-24 sm:py-32">
       <div className="mx-auto max-w-2xl rounded-pillar-card border border-border-light bg-surface-offwhite p-8 sm:p-10">
         <div className="flex gap-1 text-amber-400" aria-hidden="true">
           {Array.from({ length: 5 }).map((_, i) => (

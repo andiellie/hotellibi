@@ -114,11 +114,11 @@ section[id] { scroll-margin-top: 6rem; }
   position: absolute;
   top: 0;
   bottom: 0;
-  width: 1rem;
+  width: 3rem;
   z-index: 2;
   pointer-events: none;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
 }
 
 .logo-carousel::before {
