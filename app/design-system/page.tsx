@@ -1,10 +1,12 @@
 'use client'
 
 import Image from 'next/image'
+import Footer2Preview from '@/components/Footer2Preview'
+import NavbarV2Preview from '@/components/NavbarV2Preview'
 
 const typography = [
-  { name: 'Hero H1', spec: 'Neue Haas Grotesk Text Pro 75 Bold · 72px / 80px · ls -3.6px', example: 'Control Total de tu Hotel.', className: 'font-display font-bold text-white', style: { fontSize: '72px', lineHeight: '80px', letterSpacing: '-3.6px' } },
-  { name: 'H2 Sección', spec: 'Neue Haas Grotesk Text Pro 65 Medium · 48px / 56px · ls -0.96px', example: 'Con HotelliBI tienes el control en tus manos.', className: 'font-display font-medium text-white', style: { fontSize: '48px', lineHeight: '56px', letterSpacing: '-0.96px' } },
+  { name: 'Hero H1', spec: 'Neue Haas Grotesk Text Pro 65 Medium · 72px / 80px · ls -3.6px', example: 'Control Total de tu Hotel.', className: 'font-display font-medium text-white', style: { fontSize: '72px', lineHeight: '80px', letterSpacing: '-3.6px' } },
+  { name: 'H2 Sección', spec: 'Neue Haas Grotesk Text Pro 55 Roman · 48px / 56px · ls -0.96px', example: 'Con HotelliBI tienes el control en tus manos.', className: 'font-display font-normal text-white', style: { fontSize: '48px', lineHeight: '56px', letterSpacing: '-0.96px' } },
   { name: 'H3 Card', spec: 'Neue Haas Grotesk Text Pro 55 Roman · 32px / 40px', example: 'Control Total', className: 'font-display font-normal text-white', style: { fontSize: '32px', lineHeight: '40px' } },
   { name: 'Métrica grande', spec: 'Neue Haas Grotesk Text Pro 65 Medium · 32px / 40px · ls -0.32px', example: '78.4%', className: 'font-display font-medium text-white', style: { fontSize: '32px', lineHeight: '40px', letterSpacing: '-0.32px' } },
   { name: 'Card título (dashboard)', spec: 'Neue Haas Grotesk Text Pro 55 Roman · 24px / 32px', example: 'Rendimiento Global', className: 'font-display font-normal text-white', style: { fontSize: '24px', lineHeight: '32px' } },
@@ -26,6 +28,8 @@ const colors = [
   { name: 'bg-near-black', hex: '#0A0A0D' },
   { name: 'brand-blue', hex: '#3141D0' },
   { name: 'accent-red', hex: '#B30205' },
+  { name: 'brand-orange', hex: '#E6714B' },
+  { name: 'brand-navy-deep', hex: '#00033C' },
   { name: 'text-on-dark-secondary', hex: '#C5C6CC' },
   { name: 'text-on-dark-muted', hex: '#8F9096' },
   { name: 'text-on-light-secondary', hex: '#757575' },
@@ -153,7 +157,38 @@ export default function DesignSystemPage() {
                 .footer-rule — border-top 1px rgba(148,163,184,.18). Retirada temporalmente del footer, guardada acá para reusar.
               </p>
             </div>
+            <div>
+              <div className="h-24 rounded-pillar-card border border-slate-700/70 p-4">
+                <span className="text-xs text-on-dark-secondary">Card de testimonio</span>
+              </div>
+              <p className="mt-2 text-xs text-on-dark-secondary">
+                border-slate-700/70 en rounded-pillar-card — retirado de Testimonial.tsx (ahora sin borde), guardado acá para reusar.
+              </p>
+            </div>
           </div>
+        </section>
+
+        {/* Navbar v2 — concepto, solo preview */}
+        <section className="mt-16">
+          <h2 className="mb-2 font-display text-xl font-medium">Navbar v2 (concepto — solo preview)</h2>
+          <p className="mb-6 max-w-2xl text-sm text-on-dark-secondary">
+            Alternativa con glass gris #333333, wordmark "hotelliBI" como texto real centrado (fuente Days One,
+            no imagen), links a la izquierda, toggle de idioma + "Log In Socios" a la derecha con íconos
+            lucide-react. No implementado en el sitio real — solo este preview.
+          </p>
+          <NavbarV2Preview />
+        </section>
+
+        {/* Footer 2 — concepto, solo preview */}
+        <section className="mt-16">
+          <h2 className="mb-2 font-display text-xl font-medium">Footer 2 (concepto — solo preview)</h2>
+          <p className="mb-6 max-w-2xl text-sm text-on-dark-secondary">
+            Inspirado en screen.movie: wordmark "hotelliBI" gigante como watermark de fondo (opacidad ~6%),
+            gráfico de barras estilizado con contornos neón (gradiente brand-blue → naranja, mismos colores
+            que la CTA "Agenda tu Demo") que crece al entrar en viewport, y 2–3 links discretos arriba a la
+            derecha. Sin columnas tradicionales. No implementado en el sitio real — solo este preview.
+          </p>
+          <Footer2Preview />
         </section>
       </div>
     </div>

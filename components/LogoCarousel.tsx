@@ -1,23 +1,26 @@
 'use client'
 
 const LOGO_FILES = [
-  'Canning.png',
   'Copia de BENS L´Hôtel Palermo logo blanco.png',
-  'Copia de BENS Recoleta Park logo blanco.png',
   'Copia de Blanco_sinfondo_MEDIANO.png',
   'Copia de La Morada positivo.png',
-  'Morada Meliquina.png',
+  'Canning.png',
   'a.png',
   'fierro.png',
+  'Copia de BENS Recoleta Park logo blanco.png',
   'ñiken.png',
+  'Morada Meliquina.png',
 ]
 
 const LOGO_SCALE: Record<string, number> = {
-  'Copia de La Morada positivo.png': 1.1,
+  'Canning.png': 1.3,
+  'Copia de La Morada positivo.png': 1.3,
+  'Morada Meliquina.png': 1.2,
   'a.png': 1.25,
   'ñiken.png': 1.25,
-  'Copia de BENS L´Hôtel Palermo logo blanco.png': 0.65,
-  'Copia de BENS Recoleta Park logo blanco.png': 0.65,
+  'fierro.png': 1.2,
+  'Copia de BENS L´Hôtel Palermo logo blanco.png': 1.1,
+  'Copia de BENS Recoleta Park logo blanco.png': 1.1,
 }
 
 const LOGOS = LOGO_FILES.map((file) => ({

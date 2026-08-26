@@ -4,23 +4,25 @@ import Features from '@/components/Features'
 import DashboardPreview from '@/components/DashboardPreview'
 import ClientsSection from '@/components/ClientsSection'
 import Testimonial from '@/components/Testimonial'
-import FinalCTA from '@/components/FinalCTA'
+import BigStatement from '@/components/BigStatement'
 import DemoBooking from '@/components/DemoBooking'
 import Footer from '@/components/Footer'
 
 export default function Home() {
   return (
-    <div className="site-shell min-h-screen">
-      <NavBar />
-      <Hero />
-      <Features />
-      <Testimonial which="testimonial2" id="testimonios-2" />
-      <DashboardPreview />
-      <ClientsSection />
-      <Testimonial />
-      <FinalCTA />
-      <DemoBooking />
+    <>
+      <div className="site-shell">
+        <NavBar />
+        <Hero />
+        <Features />
+        <Testimonial which="testimonial2" id="testimonios-2" />
+        <DashboardPreview />
+        <ClientsSection />
+        <Testimonial />
+        <BigStatement />
+        <DemoBooking />
+      </div>
       <Footer />
-    </div>
+    </>
   )
 }

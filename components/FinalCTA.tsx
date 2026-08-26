@@ -7,8 +7,8 @@ export default function FinalCTA() {
   const { t } = useLanguage()
   return (
     <section id="cta" className="px-5 py-28 sm:py-40">
-      <div className="mx-auto max-w-6xl">
-        <h2 className="max-w-5xl font-display text-5xl font-bold leading-tight tracking-tight text-white sm:text-7xl">
+      <div className="mx-auto max-w-[1200px]">
+        <h2 className="max-w-5xl font-display text-5xl font-medium leading-tight tracking-tight text-on-dark-primary sm:text-7xl">
           {t.finalCta.title}
         </h2>
 

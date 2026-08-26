@@ -44,6 +44,10 @@ export type Translations = {
     role: string
     initials: string
   }
+  bigStatement: {
+    line1: string
+    line2: string
+  }
   finalCta: {
     title: string
     subtitle: string
@@ -65,13 +69,25 @@ export type Translations = {
   }
   footer: {
     tagline: string
-    site: string
-    pricing: string
-    contact: string
-    legal: string
+    menu: string
+    bookDemo: string
     privacy: string
     terms: string
+    contact: string
+    relatedProducts: string
+    bens: string
+    partnerAccess: string
     rights: string
+  }
+  legalPage: {
+    privacyTab: string
+    termsTab: string
+    privacyTitle: string
+    privacyUpdated: string
+    privacyBody: string[]
+    termsTitle: string
+    termsUpdated: string
+    termsBody: string[]
   }
 }
 
@@ -142,6 +158,10 @@ export const translations: Record<Language, Translations> = {
       role: 'Directora de Operaciones, Ñikén Hotel & Spa',
       initials: 'VS',
     },
+    bigStatement: {
+      line1: 'Lleva la gestión de tu hotel',
+      line2: 'a otro nivel.',
+    },
     finalCta: {
       title: 'Lleva la gestión de tu hotel a otro nivel.',
       subtitle: 'Una plataforma visual para tomar decisiones más rápidas y rentables.',
@@ -169,13 +189,37 @@ export const translations: Record<Language, Translations> = {
     },
     footer: {
       tagline: 'Herramienta visual de inteligencia de negocios para hoteles.',
-      site: 'SITIO',
-      pricing: 'Pricing',
-      contact: 'CONTACTO Y REDES',
-      legal: 'LEGAL',
+      menu: 'Menú',
+      bookDemo: 'Agendar Demo',
       privacy: 'Política de Privacidad',
       terms: 'Términos de Servicio',
+      contact: 'Contacto',
+      relatedProducts: 'Productos relacionados',
+      bens: 'BENS',
+      partnerAccess: 'Hotellibi Acceso Socios',
       rights: '© 2024 HotelliBI. Todos los derechos reservados.',
+    },
+    legalPage: {
+      privacyTab: 'Política de Privacidad',
+      termsTab: 'Términos de Servicio',
+      privacyTitle: 'Política de Privacidad',
+      privacyUpdated: 'Última actualización: enero de 2026',
+      privacyBody: [
+        'En HotelliBI recopilamos únicamente los datos necesarios para operar el servicio: información de contacto que nos proporcionás al agendar una demo (nombre, correo electrónico corporativo y el PMS que utilizás) y los datos operativos que tu hotel conecta a la plataforma para generar los reportes y dashboards.',
+        'Usamos esta información exclusivamente para brindarte el servicio, comunicarnos con vos sobre tu cuenta o demo, y mejorar el producto. No vendemos ni compartimos tus datos con terceros con fines publicitarios.',
+        'Los datos operativos de tu hotel (ocupación, tarifas, RevPAR y métricas similares) son de tu propiedad. Los procesamos únicamente para generar los reportes de tu cuenta y no los utilizamos para ningún otro fin sin tu consentimiento.',
+        'Podés solicitar en cualquier momento acceso, corrección o eliminación de tus datos personales escribiendo a contacto@hotellibi.com.',
+        'Esta política puede actualizarse a medida que el producto evoluciona. Te notificaremos ante cualquier cambio significativo.',
+      ],
+      termsTitle: 'Términos de Servicio',
+      termsUpdated: 'Última actualización: enero de 2026',
+      termsBody: [
+        'Al acceder a la lista de espera o usar HotelliBI, aceptás estos términos. Si no estás de acuerdo, te pedimos que no utilices el servicio.',
+        'HotelliBI es una plataforma visual de inteligencia de negocios para hoteles, actualmente en etapa de lanzamiento gradual por mercado. La disponibilidad de funciones puede variar mientras el producto está en esta etapa.',
+        'Sos responsable de la exactitud de los datos que conectás o cargás a la plataforma, y de mantener la confidencialidad de las credenciales de acceso a tu cuenta.',
+        'Nos esforzamos por mantener el servicio disponible y preciso, pero no garantizamos disponibilidad ininterrumpida. No nos hacemos responsables por decisiones comerciales tomadas exclusivamente en base a los reportes de la plataforma.',
+        'Podemos actualizar estos términos con el tiempo. El uso continuado del servicio después de una actualización implica la aceptación de los nuevos términos.',
+      ],
     },
   },
   en: {
@@ -243,6 +287,10 @@ export const translations: Record<Language, Translations> = {
       role: 'Director of Operations, Ñikén Hotel & Spa',
       initials: 'VS',
     },
+    bigStatement: {
+      line1: "Take your hotel's management",
+      line2: 'to the next level.',
+    },
     finalCta: {
       title: "Take your hotel's management to the next level.",
       subtitle: 'A visual platform for faster, more profitable decisions.',
@@ -270,13 +318,37 @@ export const translations: Record<Language, Translations> = {
     },
     footer: {
       tagline: 'Visual business intelligence tool for hotels.',
-      site: 'SITE',
-      pricing: 'Pricing',
-      contact: 'CONTACT & SOCIAL',
-      legal: 'LEGAL',
+      menu: 'Menu',
+      bookDemo: 'Book Demo',
       privacy: 'Privacy Policy',
       terms: 'Terms of Service',
+      contact: 'Contact',
+      relatedProducts: 'Related Products',
+      bens: 'BENS',
+      partnerAccess: 'Hotellibi Partner Access',
       rights: '© 2024 HotelliBI. All rights reserved.',
+    },
+    legalPage: {
+      privacyTab: 'Privacy Policy',
+      termsTab: 'Terms of Service',
+      privacyTitle: 'Privacy Policy',
+      privacyUpdated: 'Last updated: January 2026',
+      privacyBody: [
+        "At HotelliBI we collect only the data needed to run the service: contact information you provide when booking a demo (name, corporate email, and the PMS you use), and the operational data your hotel connects to the platform to generate reports and dashboards.",
+        "We use this information solely to provide the service, communicate with you about your account or demo, and improve the product. We do not sell or share your data with third parties for advertising purposes.",
+        "Your hotel's operational data (occupancy, rates, RevPAR, and similar metrics) belongs to you. We process it only to generate the reports on your account and do not use it for any other purpose without your consent.",
+        "You can request access to, correction of, or deletion of your personal data at any time by writing to contacto@hotellibi.com.",
+        "This policy may be updated as the product evolves. We'll notify you of any significant changes.",
+      ],
+      termsTitle: 'Terms of Service',
+      termsUpdated: 'Last updated: January 2026',
+      termsBody: [
+        "By joining the waitlist or using HotelliBI, you agree to these terms. If you don't agree, please don't use the service.",
+        'HotelliBI is a visual business intelligence platform for hotels, currently in a gradual, market-by-market rollout. Feature availability may vary while the product is in this stage.',
+        "You're responsible for the accuracy of the data you connect or upload to the platform, and for keeping your account credentials confidential.",
+        'We work to keep the service available and accurate, but we do not guarantee uninterrupted availability. We are not responsible for business decisions made solely based on the platform\'s reports.',
+        'We may update these terms over time. Continued use of the service after an update means you accept the new terms.',
+      ],
     },
   },
 }
