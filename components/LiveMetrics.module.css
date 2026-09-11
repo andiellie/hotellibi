@@ -1,0 +1,236 @@
+/* components/LiveMetrics.module.css
+   "Hotel Saturno — Live Metrics" widget. Uses the same design tokens as the
+   rest of HotelliBI: navy-deepest background, accent-red highlight,
+   Neue Haas Grotesk (var(--font-neue-haas)) for numbers, Inter for text.
+*/
+
+.widget {
+  background: var(--color-navy-deepest, #000510);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-pillar-card, 8px);
+  padding: 28px 24px 32px;
+}
+
+.widgetHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.liveDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-accent-red, #b30205);
+  box-shadow: 0 0 0 0 rgba(179, 2, 5, 0.6);
+  animation: live-pulse 2s ease-out infinite;
+}
+
+@keyframes live-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(179, 2, 5, 0.5); }
+  70% { box-shadow: 0 0 0 8px rgba(179, 2, 5, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(179, 2, 5, 0); }
+}
+
+.widgetTitle {
+  font-family: var(--font-inter), "Inter", ui-sans-serif, system-ui, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  color: var(--color-on-dark-secondary, #c5c6cc);
+}
+
+/* KPI row (reuses the StatCards visual language) */
+
+.kpiRow {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 28px;
+}
+
+@media (max-width: 720px) {
+  .kpiRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+.kpiCard {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: var(--radius-pillar-card, 8px);
+  padding: 20px 20px 18px;
+  min-width: 0;
+}
+
+.kpiLabel {
+  font-family: var(--font-inter), "Inter", ui-sans-serif, system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #8f9096;
+  margin-bottom: 10px;
+}
+
+.kpiValue {
+  font-family: var(--font-neue-haas), "Neue Haas Grotesk", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 34px;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  color: #f8f5f5;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.kpiDelta {
+  font-family: var(--font-inter), "Inter", ui-sans-serif, system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--color-accent-red, #b30205);
+  margin: 8px 0 6px;
+}
+
+.kpiVs {
+  font-family: var(--font-inter), "Inter", ui-sans-serif, system-ui, sans-serif;
+  font-size: 11px;
+  color: #8f9096;
+  line-height: 1.4;
+}
+
+.kpiVs b {
+  color: #c5c6cc;
+  font-weight: 600;
+}
+
+/* Comparison bar */
+
+.comparison {
+  margin-bottom: 28px;
+}
+
+.comparisonHeader {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.comparisonLabel {
+  font-family: var(--font-inter), "Inter", ui-sans-serif, system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #8f9096;
+}
+
+.comparisonValue {
+  font-family: var(--font-neue-haas), "Neue Haas Grotesk", "Helvetica Neue", Arial, sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: #f8f5f5;
+}
+
+.barTrack {
+  position: relative;
+  height: 8px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+}
+
+.barFill {
+  height: 100%;
+  border-radius: 9999px;
+  background: linear-gradient(90deg, var(--color-accent-red, #b30205), #e6714b);
+  transition: width 1200ms ease-out;
+}
+
+.barBaseline {
+  position: absolute;
+  top: -3px;
+  bottom: -3px;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.comparisonFoot {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 6px;
+  font-family: var(--font-inter), "Inter", ui-sans-serif, system-ui, sans-serif;
+  font-size: 11px;
+  color: #8f9096;
+}
+
+/* Trend chart */
+
+.chart {
+  padding-top: 4px;
+}
+
+.chartHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.chartTitle {
+  font-family: var(--font-inter), "Inter", ui-sans-serif, system-ui, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #8f9096;
+}
+
+.chartLegend {
+  display: flex;
+  gap: 14px;
+  font-family: var(--font-inter), "Inter", ui-sans-serif, system-ui, sans-serif;
+  font-size: 11px;
+}
+
+.legendCurrent {
+  color: var(--color-accent-red, #b30205);
+}
+
+.legendPrevious {
+  color: #8f9096;
+}
+
+.chartSvg {
+  width: 100%;
+  height: 120px;
+  display: block;
+  overflow: visible;
+}
+
+.lineCurrent {
+  stroke: var(--color-accent-red, #b30205);
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.linePrevious {
+  stroke: #8f9096;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 4 4;
+}
+
+.chartLabels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  font-family: var(--font-inter), "Inter", ui-sans-serif, system-ui, sans-serif;
+  font-size: 11px;
+  color: #8f9096;
+}

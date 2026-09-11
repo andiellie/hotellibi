@@ -1,8 +1,7 @@
 'use client'
 
 import { useLanguage } from '@/lib/i18n/LanguageProvider'
-
-const RECORDING_SRC = encodeURI('/images/Home/Grabación 2026-08-25 112432.gif')
+import LiveMetrics from '@/components/LiveMetrics'
 
 export default function DashboardPreview() {
   const { t } = useLanguage()
@@ -15,10 +14,7 @@ export default function DashboardPreview() {
           <h2 className="font-display font-normal text-4xl tracking-tight text-on-dark-primary sm:text-5xl lg:text-[48px] lg:leading-[56px] lg:tracking-[-0.96px]">{d.heading}</h2>
           <p className="mt-5 font-sans text-lg text-on-dark-secondary">{d.subheading}</p>
         </div>
-        <div className="dashboard-frame overflow-hidden rounded-pillar-card">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={RECORDING_SRC} alt="" className="w-full" />
-        </div>
+        <LiveMetrics />
       </div>
     </section>
   )

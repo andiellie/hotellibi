@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "@fontsource-variable/inter";
 import "./globals.css";
 import { LanguageProvider } from "@/lib/i18n/LanguageProvider";
+import { inter as interFont } from "@/lib/fonts";
 
 const neueHaas = localFont({
   src: [
@@ -23,7 +24,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="es"
-      className={`${neueHaas.variable} h-full antialiased`}
+      className={`${neueHaas.variable} ${interFont.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <LanguageProvider>{children}</LanguageProvider>
