@@ -65,7 +65,12 @@ export type Translations = {
     pmsLabel: string
     pmsPlaceholder: string
     pmsOther: string
+    pmsOtherPlaceholder: string
+    emailInvalid: string
+    waitlistAccept: string
     submit: string
+    confirmedTitle: string
+    confirmedMessage: string
   }
   footer: {
     tagline: string
@@ -101,36 +106,36 @@ export const translations: Record<Language, Translations> = {
       requestAccess: 'Solicitar acceso',
     },
     hero: {
-      title: 'Control Total de tu Hotel.',
+      title: 'Control total de tu hotel.',
       subtitle:
-        'HotelliBI unifica tus datos operativos, financieros y comerciales en una plataforma visual de inteligencia comercial.',
+        'HotelliBI junta tus datos operativos, financieros y comerciales en un solo dashboard. Sin planillas de por medio.',
       cta: 'Agenda tu Demo',
     },
     features: {
-      heading: 'Más que una herramienta visual.',
-      subheading: 'Diseñado para ejecutivos que exigen precisión y velocidad en la toma de decisiones.',
+      heading: 'Datos que se convierten en decisiones.',
+      subheading: 'Pensado para equipos que necesitan precisión y velocidad para decidir.',
       items: [
         {
           icon: '▦',
           title: 'Control Total',
           description:
-            'Monitorea cada métrica vital desde un solo panel. Integración perfecta con tu PMS y sistemas de gestión.',
+            'Monitorea cada métrica vital desde un solo panel, conectado directo a tu PMS y sistemas de gestión.',
         },
         {
           icon: '◷',
           title: 'Tiempo Recuperado',
           description:
-            'Automatiza la recolección y limpieza de datos. Elimina las hojas de cálculo manuales y enfócate en la estrategia.',
+            'Automatiza la recolección y limpieza de datos. Dejá las planillas manuales y enfocate en la estrategia.',
         },
         {
           icon: '✣',
           title: 'Visuales Listos',
-          description: 'Reportes de nivel ejecutivo generados al instante. Gráficos interactivos y reportes semanales.',
+          description: 'Reportes de nivel ejecutivo generados al instante, con gráficos interactivos y envío semanal por correo.',
         },
       ],
     },
     dashboard: {
-      heading: 'Con HotelliBI tienes el control en tus manos.',
+      heading: 'Toda la información de tu hotel, en una sola vista.',
       subheading:
         'Monitorea tu hotel de cerca, compara con métricas de años pasados y revisa cómo está tu tarifa frente a la competencia.',
       overallPerformance: 'Rendimiento Global',
@@ -142,7 +147,7 @@ export const translations: Record<Language, Translations> = {
       months: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun'],
     },
     clients: {
-      heading: 'Ellos ya usan HotelliBI en su negocio',
+      heading: 'Hoteles que ya trabajan con HotelliBI',
     },
     testimonial: {
       quote:
@@ -159,33 +164,38 @@ export const translations: Record<Language, Translations> = {
       initials: 'VS',
     },
     bigStatement: {
-      line1: 'Lleva la gestión de tu hotel',
-      line2: 'a otro nivel.',
+      line1: 'Dejá de adivinar.',
+      line2: 'Empezá a decidir con datos.',
     },
     finalCta: {
-      title: 'Lleva la gestión de tu hotel a otro nivel.',
+      title: 'Dejá de adivinar. Empezá a decidir con datos.',
       subtitle: 'Una plataforma visual para tomar decisiones más rápidas y rentables.',
       cta: 'Agenda tu Demo',
     },
     demoBooking: {
-      titleBold: 'Eleva el estándar',
-      titleNormal: 'de tu gestión operativa',
+      titleBold: 'Dejá de perder tiempo',
+      titleNormal: 'armando reportes a mano',
       description:
-        'Agenda una demostración personalizada y descubre cómo hotelliBI se integra fácilmente a tu equipo y recibe reportes semanales para tener el control total de tu hotel.',
+        'Agendá una demo y mirá cómo hotelliBI se conecta a tu PMS y te manda reportes semanales directo al correo, sin planillas de por medio.',
       checklist: [
         'Integración nativa con los principales PMS del mercado.',
         'Implementación rápida sin interrupción de operaciones.',
-        'Correos semanales para que compares cada semana.',
+        'Reportes semanales directo en tu correo, listos para comparar.',
       ],
       waitlistNote:
-        'HotelliBI será lanzado gradualmente acorde a la participación en diferentes mercados, ¿le gustaría ingresar su hotel al waitlist?',
+        'HotelliBI se lanza mercado por mercado. Sumá tu hotel a la lista de espera y te avisamos apenas esté disponible en el tuyo.',
       nameLabel: 'Nombre completo',
       namePlaceholder: 'Ej. Carlos Mendoza',
       emailLabel: 'Correo electrónico corporativo',
       pmsLabel: '¿Cuál es tu PMS?',
       pmsPlaceholder: 'Selecciona una opción',
       pmsOther: 'Otro',
+      pmsOtherPlaceholder: '(especifica)',
+      emailInvalid: 'Ingresá un correo válido (ej: nombre@hotel.com).',
+      waitlistAccept: 'Aceptar',
       submit: 'Agendar Demo',
+      confirmedTitle: 'Ya estás en la lista.',
+      confirmedMessage: 'Recibimos tus datos. Te escribimos pronto para coordinar tu demo.',
     },
     footer: {
       tagline: 'Herramienta visual de inteligencia de negocios para hoteles.',
@@ -231,35 +241,35 @@ export const translations: Record<Language, Translations> = {
       requestAccess: 'Request access',
     },
     hero: {
-      title: 'Total Control of your Hotel.',
+      title: 'Total control of your hotel.',
       subtitle:
-        'HotelliBI unifies your operational, financial, and commercial data into one visual business intelligence platform.',
+        'HotelliBI pulls your operational, financial, and commercial data into one dashboard. No spreadsheets required.',
       cta: 'Book your Demo',
     },
     features: {
-      heading: 'More than a visual tool.',
-      subheading: 'Built for executives who demand precision and speed in decision-making.',
+      heading: 'Data that turns into decisions.',
+      subheading: 'Built for teams that need precision and speed to decide.',
       items: [
         {
           icon: '▦',
           title: 'Total Control',
           description:
-            'Monitor every vital metric from a single dashboard. Seamless integration with your PMS and management systems.',
+            'Monitor every vital metric from a single dashboard, connected directly to your PMS and management systems.',
         },
         {
           icon: '◷',
           title: 'Time Reclaimed',
-          description: 'Automate data collection and cleanup. Eliminate manual spreadsheets and focus on strategy.',
+          description: 'Automate data collection and cleanup. Ditch the manual spreadsheets and focus on strategy.',
         },
         {
           icon: '✣',
           title: 'Ready-Made Visuals',
-          description: 'Executive-level reports generated instantly. Interactive charts and weekly reports.',
+          description: 'Executive-level reports generated instantly, with interactive charts and a weekly email.',
         },
       ],
     },
     dashboard: {
-      heading: "With HotelliBI, you're in control.",
+      heading: "Your hotel's full picture, in one view.",
       subheading:
         "Monitor your hotel closely, compare against past years' metrics, and check how your rate stacks up against the competition.",
       overallPerformance: 'Overall Performance',
@@ -271,7 +281,7 @@ export const translations: Record<Language, Translations> = {
       months: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
     },
     clients: {
-      heading: 'They already use HotelliBI in their business',
+      heading: 'Hotels already running on HotelliBI',
     },
     testimonial: {
       quote:
@@ -288,33 +298,38 @@ export const translations: Record<Language, Translations> = {
       initials: 'VS',
     },
     bigStatement: {
-      line1: "Take your hotel's management",
-      line2: 'to the next level.',
+      line1: 'Stop guessing.',
+      line2: 'Start deciding with data.',
     },
     finalCta: {
-      title: "Take your hotel's management to the next level.",
+      title: 'Stop guessing. Start deciding with data.',
       subtitle: 'A visual platform for faster, more profitable decisions.',
       cta: 'Book your Demo',
     },
     demoBooking: {
-      titleBold: 'Raise the standard',
-      titleNormal: 'of your operational management',
+      titleBold: 'Stop losing hours',
+      titleNormal: 'building reports by hand',
       description:
-        'Book a personalized demo and discover how hotelliBI integrates easily with your team, plus receive weekly reports to keep total control of your hotel.',
+        'Book a demo and see how hotelliBI connects to your PMS and sends weekly reports straight to your inbox, no spreadsheets involved.',
       checklist: [
         'Native integration with the leading PMS platforms on the market.',
         'Fast implementation with no disruption to operations.',
-        'Weekly emails so you can compare week over week.',
+        'Weekly reports straight to your inbox, ready to compare.',
       ],
       waitlistNote:
-        "HotelliBI will roll out gradually based on market participation — would you like to add your hotel to the waitlist?",
+        "HotelliBI is rolling out market by market. Add your hotel to the waitlist and we'll let you know as soon as it's live in yours.",
       nameLabel: 'Full name',
       namePlaceholder: 'E.g. Carlos Mendoza',
       emailLabel: 'Corporate email',
       pmsLabel: "What's your PMS?",
       pmsPlaceholder: 'Select an option',
       pmsOther: 'Other',
+      pmsOtherPlaceholder: '(please specify)',
+      emailInvalid: 'Enter a valid email (e.g. name@hotel.com).',
+      waitlistAccept: 'Accept',
       submit: 'Book Demo',
+      confirmedTitle: "You're on the list.",
+      confirmedMessage: "We've got your info. We'll reach out soon to schedule your demo.",
     },
     footer: {
       tagline: 'Visual business intelligence tool for hotels.',

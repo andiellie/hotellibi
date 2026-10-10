@@ -25,23 +25,18 @@ export default function BigStatement() {
     return () => observer.disconnect()
   }, [])
 
-  const lineClass =
-    'block transition-all duration-700 ease-out ' +
-    (visible ? 'translate-y-0 scale-100 opacity-100' : 'translate-y-10 scale-95 opacity-0')
-
   return (
     <section className="flex min-h-screen items-center overflow-hidden px-5">
       <h1
         ref={ref}
         className="mx-auto max-w-[1200px] font-display text-5xl font-medium leading-tight tracking-tight text-on-dark-primary sm:text-7xl"
       >
-        <span className={lineClass}>{t.bigStatement.line1}</span>
+        <span className={`block ${visible ? 'statement-blur-in' : 'opacity-0'}`}>
+          {t.bigStatement.line1}
+        </span>
         <span
-          className={`${lineClass} ${visible ? 'text-shimmer' : ''}`}
-          style={{
-            transitionDelay: '150ms',
-            animation: visible ? 'text-shimmer-sweep 1.4s ease-out 900ms both' : undefined,
-          }}
+          className={`block ${visible ? 'statement-blur-in' : 'opacity-0'}`}
+          style={{ animationDelay: '200ms' }}
         >
           {t.bigStatement.line2}
         </span>

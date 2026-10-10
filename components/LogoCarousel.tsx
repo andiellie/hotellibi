@@ -1,5 +1,8 @@
 'use client'
 
+// Source files are trimmed to their actual content bounding box (plus a small
+// uniform margin) so object-fit: contain renders every logo at a consistent,
+// comparable size within its slot — no per-file scale hacks needed.
 const LOGO_FILES = [
   'Copia de BENS L´Hôtel Palermo logo blanco.png',
   'Copia de Blanco_sinfondo_MEDIANO.png',
@@ -12,36 +15,18 @@ const LOGO_FILES = [
   'Morada Meliquina.png',
 ]
 
-const LOGO_SCALE: Record<string, number> = {
-  'Canning.png': 1.3,
-  'Copia de La Morada positivo.png': 1.3,
-  'Morada Meliquina.png': 1.2,
-  'a.png': 1.25,
-  'ñiken.png': 1.25,
-  'fierro.png': 1.2,
-  'Copia de BENS L´Hôtel Palermo logo blanco.png': 1.1,
-  'Copia de BENS Recoleta Park logo blanco.png': 1.1,
-}
-
 const LOGOS = LOGO_FILES.map((file) => ({
   src: encodeURI(`/images/Home/carrousel-logo-hoteles/${file}`),
-  scale: LOGO_SCALE[file] ?? 1,
 }))
 
 export default function LogoCarousel() {
   return (
     <div className="logo-carousel">
       <div className="logo-carousel-track">
-        {[...LOGOS, ...LOGOS].map(({ src, scale }, index) => (
+        {[...LOGOS, ...LOGOS].map(({ src }, index) => (
           <span key={index} className="logo-carousel-slot">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={src}
-              alt=""
-              className="logo-carousel-logo"
-              loading="lazy"
-              style={scale !== 1 ? { transform: `scale(${scale})` } : undefined}
-            />
+            <img src={src} alt="" className="logo-carousel-logo" loading="lazy" />
           </span>
         ))}
       </div>

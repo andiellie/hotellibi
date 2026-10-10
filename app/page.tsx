@@ -1,5 +1,6 @@
 import NavBar from '@/components/NavBar'
 import Hero from '@/components/Hero'
+import BenefitsSection from '@/components/BenefitsSection'
 import Features from '@/components/Features'
 import DashboardPreview from '@/components/DashboardPreview'
 import ClientsSection from '@/components/ClientsSection'
@@ -14,6 +15,7 @@ export default function Home() {
       <div className="site-shell">
         <NavBar />
         <Hero />
+        <BenefitsSection />
         <Features />
         <Testimonial which="testimonial2" id="testimonios-2" />
         <DashboardPreview />

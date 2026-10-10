@@ -95,7 +95,7 @@ export default function NavBar() {
                 onClick={() => setMenuOpen((v) => !v)}
                 aria-label={menuOpen ? 'Cerrar menú' : 'Abrir menú'}
                 aria-expanded={menuOpen}
-                className="flex h-9 w-9 items-center justify-center rounded-pillar-card border border-white/15 text-white transition hover:border-white/30 md:hidden"
+                className="flex h-11 w-11 items-center justify-center rounded-pillar-card border border-white/15 text-white transition hover:border-white/30 md:hidden"
               >
                 <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
                   {menuOpen ? (
@@ -108,25 +108,31 @@ export default function NavBar() {
             </div>
           </div>
 
-          {menuOpen && (
-            <div className="flex flex-col gap-4 border-t border-white/10 py-5 font-sans text-sm md:hidden">
-              <a href="#features" onClick={() => setMenuOpen(false)} className={mobileLinkClass('features')}>{t.nav.features}</a>
-              <a href="#integraciones" onClick={() => setMenuOpen(false)} className={mobileLinkClass('integraciones')}>{t.nav.integrations}</a>
-              <a href="#demo" onClick={() => setMenuOpen(false)} className={mobileLinkClass('demo')}>{t.nav.demo}</a>
-              <a href="https://hotellibi.com/login" className="font-medium text-[#F8F5F5]/50 transition hover:text-[#F8F5F5]">{t.nav.login}</a>
-              <button
-                type="button"
-                onClick={toggleLanguage}
-                className="flex w-fit items-center justify-center gap-1.5 rounded-pillar-card border border-white/15 px-5 py-2.5 text-white transition hover:border-white/30"
-              >
-                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
-                  <circle cx="12" cy="12" r="9" />
-                  <path d="M3 12h18M12 3c2.5 2.5 3.75 5.5 3.75 9S14.5 18.5 12 21c-2.5-2.5-3.75-5.5-3.75-9S9.5 5.5 12 3Z" />
-                </svg>
-                {language === 'es' ? 'EN' : 'ES'}
-              </button>
+          <div
+            className={`grid transition-[grid-template-rows,opacity] duration-300 ease-out md:hidden ${
+              menuOpen ? 'grid-rows-[1fr] opacity-100' : 'grid-rows-[0fr] opacity-0'
+            }`}
+          >
+            <div className="overflow-hidden">
+              <div className="flex flex-col gap-4 border-t border-white/10 py-5 font-sans text-sm">
+                <a href="#features" onClick={() => setMenuOpen(false)} className={mobileLinkClass('features')}>{t.nav.features}</a>
+                <a href="#integraciones" onClick={() => setMenuOpen(false)} className={mobileLinkClass('integraciones')}>{t.nav.integrations}</a>
+                <a href="#demo" onClick={() => setMenuOpen(false)} className={mobileLinkClass('demo')}>{t.nav.demo}</a>
+                <a href="https://hotellibi.com/login" className="font-medium text-[#F8F5F5]/50 transition hover:text-[#F8F5F5]">{t.nav.login}</a>
+                <button
+                  type="button"
+                  onClick={toggleLanguage}
+                  className="flex w-fit items-center justify-center gap-1.5 rounded-pillar-card border border-white/15 px-5 py-2.5 text-white transition hover:border-white/30"
+                >
+                  <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M3 12h18M12 3c2.5 2.5 3.75 5.5 3.75 9S14.5 18.5 12 21c-2.5-2.5-3.75-5.5-3.75-9S9.5 5.5 12 3Z" />
+                  </svg>
+                  {language === 'es' ? 'EN' : 'ES'}
+                </button>
+              </div>
             </div>
-          )}
+          </div>
         </div>
       </nav>
     </div>
