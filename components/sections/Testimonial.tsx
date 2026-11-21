@@ -33,7 +33,7 @@ export default function Testimonial({ which = 'testimonial', id = 'testimonios' 
   }, [])
 
   return (
-    <section id={id} className="px-5 py-24 sm:py-32">
+    <section id={id} className="px-gutter py-24 sm:py-32">
       <div className="mx-auto max-w-2xl rounded-pillar-card p-8 sm:p-10">
         <div
           ref={starsRef}

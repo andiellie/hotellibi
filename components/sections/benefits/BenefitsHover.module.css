@@ -1,4 +1,4 @@
-/* components/BenefitsHover/BenefitsHover.module.css
+/* components/sections/benefits/BenefitsHover.module.css
    Paints no background of its own — the parent section supplies the dark
    surface. Expects --font-benefits-display (Bricolage Grotesque) on an
    ancestor; falls back to --font-body for projects that name it that way,

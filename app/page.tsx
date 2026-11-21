@@ -1,13 +1,12 @@
-import NavBar from '@/components/NavBar'
-import Hero from '@/components/Hero'
-import BenefitsSection from '@/components/BenefitsSection'
-import Features from '@/components/Features'
-import DashboardPreview from '@/components/DashboardPreview'
-import ClientsSection from '@/components/ClientsSection'
-import Testimonial from '@/components/Testimonial'
-import BigStatement from '@/components/BigStatement'
-import DemoBooking from '@/components/DemoBooking'
-import Footer from '@/components/Footer'
+import NavBar from '@/components/layout/NavBar'
+import Footer from '@/components/layout/Footer'
+import Hero from '@/components/sections/Hero'
+import BenefitsSection from '@/components/sections/benefits/BenefitsSection'
+import Features from '@/components/sections/Features'
+import ClientsSection from '@/components/sections/clients/ClientsSection'
+import Testimonial from '@/components/sections/Testimonial'
+import BigStatement from '@/components/sections/BigStatement'
+import DemoBooking from '@/components/sections/DemoBooking'
 
 export default function Home() {
   return (
@@ -18,7 +17,6 @@ export default function Home() {
         <BenefitsSection />
         <Features />
         <Testimonial which="testimonial2" id="testimonios-2" />
-        <DashboardPreview />
         <ClientsSection />
         <Testimonial />
         <BigStatement />

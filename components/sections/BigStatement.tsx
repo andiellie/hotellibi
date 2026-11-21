@@ -26,10 +26,10 @@ export default function BigStatement() {
   }, [])
 
   return (
-    <section className="flex min-h-screen items-center overflow-hidden px-5">
+    <section className="flex min-h-screen items-center overflow-hidden px-gutter">
       <h1
         ref={ref}
-        className="mx-auto max-w-[1200px] font-display text-5xl font-medium leading-tight tracking-tight text-on-dark-primary sm:text-7xl"
+        className="mx-auto max-w-site font-display text-5xl font-medium leading-tight tracking-tight text-on-dark-primary sm:text-7xl"
       >
         <span className={`block ${visible ? 'statement-blur-in' : 'opacity-0'}`}>
           {t.bigStatement.line1}

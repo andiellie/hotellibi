@@ -1,6 +1,6 @@
 "use client";
 
-// components/BenefitsHover/BenefitsHover.tsx
+// components/sections/benefits/BenefitsHover.tsx
 //
 // Six large words in vertical strips that open into cards: hover on desktop,
 // tap on mobile, Tab + arrow keys on keyboard. Each collapsed strip shows a
@@ -19,7 +19,7 @@
 //                              wires up a differently-named variable)
 //
 // Numbers below are illustrative and reuse the same sample figures already
-// shown elsewhere on the landing page (StatCards / LiveMetrics) so the site
+// shown elsewhere on the landing page so the site
 // stays internally consistent — replace BENEFITS or pass the `items` prop
 // once real metrics are available.
 

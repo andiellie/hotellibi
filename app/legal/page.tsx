@@ -1,5 +1,5 @@
 import { Suspense } from 'react'
-import LegalTabs from '@/components/LegalTabs'
+import LegalTabs from './_components/LegalTabs'
 
 export default function LegalPage() {
   return (

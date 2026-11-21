@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { useLanguage } from '@/lib/i18n/LanguageProvider'
-import { useScrollReveal } from '@/lib/useScrollReveal'
+import { useScrollReveal } from '@/hooks/useScrollReveal'
 
 const NAME_MAX = 80
 const EMAIL_MAX = 100
@@ -68,8 +68,8 @@ export default function DemoBooking() {
   }
 
   return (
-    <section id="demo" className="px-5 py-24 sm:py-32">
-      <div ref={ref} className="mx-auto grid max-w-[1200px] gap-12 lg:grid-cols-2 lg:items-center lg:gap-20">
+    <section id="demo" className="px-gutter py-24 sm:py-32">
+      <div ref={ref} className="mx-auto grid max-w-site gap-12 lg:grid-cols-2 lg:items-center lg:gap-20">
         <div
           className={`transition-all duration-700 ease-out ${
             visible ? 'translate-x-0 opacity-100' : '-translate-x-8 opacity-0'

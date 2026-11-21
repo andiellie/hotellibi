@@ -41,6 +41,9 @@
   --radius-badge: 12px;
   --radius-nav-pill: 9999px;
 
+  /* Layout — ancho de contenido de todas las secciones (max-w-site), igual al bloque BigStatement */
+  --container-site: 912px;
+
   --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
   --font-display: var(--font-neue-haas), 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
 }
@@ -290,4 +293,9 @@ section[id] { scroll-margin-top: 6rem; }
     animation: none;
     transform: none;
   }
+}
+
+/* Layout — margen lateral compartido por todas las secciones */
+@utility px-gutter {
+  padding-inline: 1.25rem;
 }
