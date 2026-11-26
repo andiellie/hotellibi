@@ -1,7 +1,6 @@
 import NavBar from '@/components/layout/NavBar'
 import Footer from '@/components/layout/Footer'
 import Hero from '@/components/sections/Hero'
-import BenefitsSection from '@/components/sections/benefits/BenefitsSection'
 import Features from '@/components/sections/Features'
 import ClientsSection from '@/components/sections/clients/ClientsSection'
 import Testimonial from '@/components/sections/Testimonial'
@@ -14,7 +13,6 @@ export default function Home() {
       <div className="site-shell">
         <NavBar />
         <Hero />
-        <BenefitsSection />
         <Features />
         <Testimonial which="testimonial2" id="testimonios-2" />
         <ClientsSection />
