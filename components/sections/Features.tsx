@@ -110,8 +110,8 @@ export default function Features() {
   }
 
   return (
-    <section id="features" className="px-5 py-24 sm:py-32">
-      <div className="mx-auto max-w-[1200px]">
+    <section id="features" className="px-gutter py-24 sm:py-32">
+      <div className="mx-auto max-w-site">
         <div className="mb-16 text-center">
           <h2 className="font-display text-4xl font-medium tracking-tight text-on-dark-primary sm:text-5xl lg:text-[48px] lg:leading-[56px] lg:tracking-[-0.96px]">{t.features.heading}</h2>
           <p className="mt-5 font-sans text-lg text-on-dark-secondary">

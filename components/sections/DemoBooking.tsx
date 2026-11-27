@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react'
 import { useLanguage } from '@/lib/i18n/LanguageProvider'
-import { useScrollReveal } from '@/lib/useScrollReveal'
+import { useScrollReveal } from '@/hooks/useScrollReveal'
 
 const NAME_MAX = 80
 const EMAIL_MAX = 100
@@ -68,10 +68,10 @@ export default function DemoBooking() {
   }
 
   return (
-    <section id="demo" className="px-5 py-24 sm:py-32">
-      <div ref={ref} className="mx-auto grid max-w-[1200px] gap-12 lg:grid-cols-2 lg:items-center lg:gap-20">
+    <section id="demo" className="px-gutter py-24 sm:py-32">
+      <div ref={ref} className="mx-auto grid max-w-site gap-12 lg:grid-cols-2 lg:items-stretch lg:gap-20">
         <div
-          className={`transition-all duration-700 ease-out ${
+          className={`transition-all duration-700 ease-out lg:flex lg:flex-col lg:justify-center ${
             visible ? 'translate-x-0 opacity-100' : '-translate-x-8 opacity-0'
           }`}
         >
@@ -94,25 +94,30 @@ export default function DemoBooking() {
                   transform: visible ? 'translateX(0)' : 'translateX(-12px)',
                 }}
               >
-                <span
-                  className="mt-0.5 flex h-5 w-5 flex-none items-center justify-center rounded-full border-2 border-[#B30205] text-[#B30205] transition-transform duration-300 ease-out"
-                  style={{
-                    transitionDelay: `${150 + i * 100 + 250}ms`,
-                    transform: visible ? 'scale(1)' : 'scale(0.5)',
-                  }}
-                >
-                  <svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="square" strokeLinejoin="miter" aria-hidden="true">
-                    <path
-                      pathLength={100}
-                      strokeDasharray={100}
-                      d="M4 12l6 6L20 6"
-                      style={{
-                        strokeDashoffset: visible ? 0 : 100,
-                        transition: `stroke-dashoffset 0.4s ease-out ${150 + i * 100 + 350}ms`,
-                      }}
-                    />
-                  </svg>
-                </span>
+                {/* Círculo fijo con degradado naranja → naranja quemado; la palomita se dibuja al entrar en vista */}
+                <svg viewBox="0 0 20 20" width="20" height="20" fill="none" className="mt-0.5 flex-none" aria-hidden="true">
+                  <defs>
+                    <linearGradient id={`demo-check-gradient-${i}`} x1="0" y1="0" x2="20" y2="20" gradientUnits="userSpaceOnUse">
+                      <stop offset="0%" stopColor="#FF8A3D" />
+                      <stop offset="100%" stopColor="#C2410C" />
+                    </linearGradient>
+                  </defs>
+                  <circle cx="10" cy="10" r="9" stroke={`url(#demo-check-gradient-${i})`} strokeWidth="2" />
+                  <path
+                    d="M6 10.5l2.75 2.75L14.25 7.5"
+                    stroke={`url(#demo-check-gradient-${i})`}
+                    strokeWidth="2.25"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    pathLength={100}
+                    strokeDasharray={100}
+                    className="motion-reduce:!transition-none"
+                    style={{
+                      strokeDashoffset: visible ? 0 : 100,
+                      transition: `stroke-dashoffset 0.6s cubic-bezier(0.65, 0, 0.35, 1) ${150 + i * 150 + 400}ms`,
+                    }}
+                  />
+                </svg>
                 <span>{item}</span>
               </li>
             ))}
@@ -120,7 +125,7 @@ export default function DemoBooking() {
         </div>
 
         <div
-          className={`relative overflow-hidden rounded-pillar-card p-[2px] transition-all duration-700 ease-out ${
+          className={`relative flex flex-col overflow-hidden rounded-pillar-card p-[2px] transition-all duration-700 ease-out ${
             visible ? 'translate-x-0 opacity-100' : 'translate-x-8 opacity-0'
           }`}
           style={{ transitionDelay: '150ms' }}
@@ -135,7 +140,7 @@ export default function DemoBooking() {
             />
           </span>
           {submitted ? (
-            <div className="dashboard-frame relative flex min-h-[420px] flex-col items-center justify-center rounded-pillar-card !border-0 p-8 text-center text-slate-950 sm:p-10">
+            <div className="dashboard-frame relative flex min-h-[420px] flex-1 flex-col items-center justify-center rounded-pillar-card !border-0 p-8 text-center text-slate-950 sm:p-10">
               <span className="flex h-14 w-14 items-center justify-center rounded-full border-2 border-[#B30205] text-[#B30205]">
                 <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <path d="M4 12l6 6L20 6" />
@@ -149,7 +154,7 @@ export default function DemoBooking() {
               </p>
             </div>
           ) : (
-            <form onSubmit={handleSubmit} className="dashboard-frame relative rounded-pillar-card !border-0 p-8 text-slate-950 sm:p-10">
+            <form onSubmit={handleSubmit} className="dashboard-frame relative flex flex-1 flex-col justify-center rounded-pillar-card !border-0 p-8 text-slate-950 sm:p-10">
               <div>
                 <label htmlFor="name" className="mb-2 block font-sans text-sm font-medium text-slate-900">
                   {d.nameLabel}

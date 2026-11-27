@@ -3,7 +3,6 @@ export type Language = 'es' | 'en'
 export type Translations = {
   nav: {
     features: string
-    integrations: string
     demo: string
     login: string
     requestAccess: string
@@ -17,17 +16,6 @@ export type Translations = {
     heading: string
     subheading: string
     items: { icon: string; title: string; description: string }[]
-  }
-  dashboard: {
-    heading: string
-    subheading: string
-    overallPerformance: string
-    occupancy: string
-    compSet: string
-    revparTrend: string
-    currentYear: string
-    previousYear: string
-    months: string[]
   }
   clients: {
     heading: string
@@ -100,7 +88,6 @@ export const translations: Record<Language, Translations> = {
   es: {
     nav: {
       features: 'Features',
-      integrations: 'Integraciones',
       demo: 'Agenda una DEMO',
       login: 'Login',
       requestAccess: 'Solicitar acceso',
@@ -133,18 +120,6 @@ export const translations: Record<Language, Translations> = {
           description: 'Reportes de nivel ejecutivo generados al instante, con gráficos interactivos y envío semanal por correo.',
         },
       ],
-    },
-    dashboard: {
-      heading: 'Toda la información de tu hotel, en una sola vista.',
-      subheading:
-        'Monitorea tu hotel de cerca, compara con métricas de años pasados y revisa cómo está tu tarifa frente a la competencia.',
-      overallPerformance: 'Rendimiento Global',
-      occupancy: 'Ocupación',
-      compSet: 'Vs. Comp Set Local',
-      revparTrend: 'Evolución RevPAR YTD',
-      currentYear: 'Año Actual',
-      previousYear: 'Año Anterior',
-      months: ['Ene', 'Feb', 'Mar', 'Abr', 'May', 'Jun'],
     },
     clients: {
       heading: 'Hoteles que ya trabajan con HotelliBI',
@@ -235,7 +210,6 @@ export const translations: Record<Language, Translations> = {
   en: {
     nav: {
       features: 'Features',
-      integrations: 'Integrations',
       demo: 'Book a DEMO',
       login: 'Login',
       requestAccess: 'Request access',
@@ -267,18 +241,6 @@ export const translations: Record<Language, Translations> = {
           description: 'Executive-level reports generated instantly, with interactive charts and a weekly email.',
         },
       ],
-    },
-    dashboard: {
-      heading: "Your hotel's full picture, in one view.",
-      subheading:
-        "Monitor your hotel closely, compare against past years' metrics, and check how your rate stacks up against the competition.",
-      overallPerformance: 'Overall Performance',
-      occupancy: 'Occupancy',
-      compSet: 'Vs. Local Comp Set',
-      revparTrend: 'RevPAR YTD Trend',
-      currentYear: 'Current Year',
-      previousYear: 'Previous Year',
-      months: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
     },
     clients: {
       heading: 'Hotels already running on HotelliBI',

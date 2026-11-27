@@ -1,8 +1,8 @@
 'use client'
 
 import Image from 'next/image'
-import Footer2Preview from '@/components/Footer2Preview'
-import NavbarV2Preview from '@/components/NavbarV2Preview'
+import Footer2Preview from './_components/Footer2Preview'
+import NavbarV2Preview from './_components/NavbarV2Preview'
 
 const typography = [
   { name: 'Hero H1', spec: 'Neue Haas Grotesk Text Pro 65 Medium · 72px / 80px · ls -3.6px', example: 'Control Total de tu Hotel.', className: 'font-display font-medium text-white', style: { fontSize: '72px', lineHeight: '80px', letterSpacing: '-3.6px' } },

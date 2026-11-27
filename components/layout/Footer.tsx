@@ -7,15 +7,14 @@ export default function Footer() {
   const { t } = useLanguage()
   const f = t.footer
   return (
-    <footer className="footer-rule relative flex min-h-screen flex-col justify-center overflow-hidden bg-navy-alt px-5 py-14 font-sans text-white">
+    <footer className="footer-rule relative flex min-h-screen flex-col justify-center overflow-hidden bg-navy-alt px-gutter py-14 font-sans text-white">
       <div className="hero-glow" aria-hidden="true" />
-      <div className="relative mx-auto w-full max-w-[1200px]">
+      <div className="relative mx-auto w-full max-w-site">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
           <div>
             <h4 className="mb-4 text-xs font-bold tracking-widest text-on-dark-muted">{f.menu}</h4>
             <ul className="space-y-2 text-on-dark-secondary">
               <li><a href="#features" className="transition hover:text-white">{t.nav.features}</a></li>
-              <li><a href="#integraciones" className="transition hover:text-white">{t.nav.integrations}</a></li>
               <li><a href="#demo" className="transition hover:text-white">{f.bookDemo}</a></li>
               <li><a href="/legal?tab=privacidad" className="transition hover:text-white">{f.privacy}</a></li>
               <li><a href="/legal?tab=terminos" className="transition hover:text-white">{f.terms}</a></li>

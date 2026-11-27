@@ -1,7 +1,7 @@
 'use client'
 
 import { useLanguage } from '@/lib/i18n/LanguageProvider'
-import { useScrollReveal } from '@/lib/useScrollReveal'
+import { useScrollReveal } from '@/hooks/useScrollReveal'
 import LogoCarousel from './LogoCarousel'
 
 export default function ClientsSection() {
@@ -10,7 +10,7 @@ export default function ClientsSection() {
 
   return (
     <section id="clientes" className="py-24 sm:py-32">
-      <div className="mx-auto max-w-[1200px] px-5 text-center">
+      <div className="mx-auto max-w-site px-gutter text-center">
         <h2
           ref={ref}
           className={`font-display text-3xl font-medium tracking-tight text-on-dark-primary transition-all duration-700 ease-out sm:text-4xl ${
