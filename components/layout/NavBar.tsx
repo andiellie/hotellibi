@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useLanguage } from '@/lib/i18n/LanguageProvider'
+import AnimatedLogo from '@/components/ui/AnimatedLogo'
 
 const SECTION_IDS = ['features', 'demo']
 
@@ -84,7 +85,7 @@ export default function NavBar() {
       <header className={`site-header ${scrolled ? 'site-header--glass' : ''}`}>
         <nav className="flex h-[70px] items-center justify-between">
           <Link href="/" className="flex shrink-0 items-center">
-            <Image src="/hotellibi-logo-blanco.svg" alt="hotelliBI" width={143} height={26} priority />
+            <AnimatedLogo />
           </Link>
 
           {/* Desktop */}
